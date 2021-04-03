@@ -16,7 +16,6 @@ Also see [[file:requirements.txt][requirements.txt]].
 python --version
 #+END_SRC
 
-#+RESULTS:
-#+BEGIN_SRC org
+#+BEGIN_SRC shell
 Python 3.7.3
 #+END_SRC
