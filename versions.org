@@ -1,7 +1,16 @@
+#+PROPERTY: header-args:shell :results output raw :exports both
+
 * Machine
-#+BEGIN_SRC shell :results output :exports both
+#+BEGIN_SRC shell
 uname -a
 #+END_SRC
 
 #+RESULTS:
-: Linux bach 4.19.0-14-amd64 #1 SMP Debian 4.19.171-2 (2021-01-30) x86_64 GNU/Linux
+Linux bach 4.19.0-14-amd64 #1 SMP Debian 4.19.171-2 (2021-01-30) x86_64 GNU/Linux
+
+* Software
+Also see [[file:requirements.txt][requirements.txt]].
+
+#+BEGIN_SRC shell
+uname -a
+#+END_SRC
