@@ -3,7 +3,7 @@ import time
 import os
 
 I = instaloader.Instaloader()
-I.interactive_login(os.getenv('IG_USER'))
+I.interactive_login(os.getenv("IG_USER"))
 query = instaloader.Hashtag.from_name(I.context, "100daysofpractice")
 k = 1
 for post in query.get_all_posts():
