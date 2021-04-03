@@ -1,4 +1,5 @@
 import instaloader
+import time
 
 I = instaloader.Instaloader()
 query = instaloader.Hashtag.from_name(I.context,
@@ -6,3 +7,4 @@ query = instaloader.Hashtag.from_name(I.context,
 for post in query.get_all_posts():
     with open("shortcodes.txt", "a") as file_object:
         file_object.write(post.shortcode + "\n")
+        time.sleep(0.1)
