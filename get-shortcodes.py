@@ -12,5 +12,5 @@ for post in query.get_all_posts():
     print(shortcode)
     with open('shortcodes.txt', 'a') as file_object:
         file_object.write(shortcode + '\n')
-    time.sleep(1)
+    time.sleep(0.1)
     k += 1
