@@ -1,8 +1,8 @@
 import instaloader
 
-L = instaloader.Instaloader()
-hashtag = Hashtag.from_name(L.context, "100daysofpractice")
-for post in hashtag.get_posts():
-    with open("shortcode.txt") as file_object:
+I = instaloader.Instaloader()
+query = instaloader.Hashtag.from_name(I.context,
+                                      "100daysofpractice")
+for post in query.get_all_posts():
+    with open("shortcodes.txt", "a") as file_object:
         file_object.write(post.shortcode + "\n")
-    input()
