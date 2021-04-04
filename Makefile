@@ -1,3 +1,7 @@
+ifndef IG_USER
+$(error IG_USER is not set)
+endif
+
 all: dataset
 
 dataset:
