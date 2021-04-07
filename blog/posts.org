@@ -35,6 +35,8 @@ Let’s start!
 First, lets open the file to read the shortcodes:
 
 #+BEGIN_EXAMPLE
+#!/usr/bin/env python
+
 import fileinput
 
 for line in fileinput.input('../shortcodes/shortcodes-uniq.txt'):
@@ -47,6 +49,8 @@ This username will be necessary to fetch the data we need.
 To do this for the first shorcode we’ll need to run:
 
 #+BEGIN_EXAMPLE
+#!/usr/bin/env python
+
 import instaloader
 
 shortcode = '008-CMh_h-'
@@ -62,6 +66,8 @@ It seems better to do this way---call =instaloader= from the shell script---beca
 Let’s get to it, then:
 
 #+BEGIN_EXAMPLE
+#!/usr/bin/env python
+
 import argparse
 import instaloader
 
