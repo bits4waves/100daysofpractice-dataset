@@ -1,3 +1,5 @@
+#!/bin/bash
+
 SHORTCODES=~/sci/100daysofpractice-dataset/shortcodes/shortcodes-test.txt
 PYTHON=~/sci/100daysofpractice-dataset/venv/bin/python
 OUTPUT=shortcode-username.csv
