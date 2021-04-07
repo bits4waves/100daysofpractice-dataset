@@ -75,7 +75,7 @@ This approach may seem counterintuitive at first, because we could do everything
 It seems better to do this way---call =instaloader= from the shell script---because it is what worked best in the past, in terms of reliability.
 Let’s get to it, then:
 
-#+BEGIN_SRC python :tangle ../get-username.py
+#+BEGIN_SRC python :tangle ../src/get-username.py
 import argparse
 import instaloader
 
