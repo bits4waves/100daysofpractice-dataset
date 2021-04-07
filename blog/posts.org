@@ -38,4 +38,7 @@ import fileinput
 
 for line in fileinput.input('../shortcodes/shortcodes-uniq.txt'):
     print(line)
+    if (fileinput.lineno() == 10) break
 #+END_SRC
+
+#+RESULTS:
