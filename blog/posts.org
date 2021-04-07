@@ -90,7 +90,7 @@ print(post.owner_profile.username)
 
 #+RESULTS:
 
-Now, we’ll create a shell script to fetch the handle for each one of the shortcodes:
+Now, we’ll create a shell script to fetch the handle for each one of the shortcodes, and then fetch the data:
 
 #+BEGIN_SRC shell :tangle ../src/get-usernames.sh
 #!/bin/bash
