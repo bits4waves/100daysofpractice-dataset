@@ -73,5 +73,5 @@ post = Post.from_shortcode(I.context, '008-CMh_h-')
 : ModuleNotFoundError: No module named 'instaloader'
 
 # Local Variables:
-# org-babel-python-command: ~/sci/100daysofpractice-dataset/venv/bin/python
+# org-babel-python-command: "~/sci/100daysofpractice-dataset/venv/bin/python"
 # End:
