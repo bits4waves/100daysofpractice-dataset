@@ -1,5 +1,6 @@
 #+ORG2BLOG
 #+PROPERTY: header-args :results output pp
+#+PROPERTY: header-args:python :session *python*
 
 * Fetch the data from the shortcodes
 :PROPERTIES:
