@@ -72,7 +72,12 @@ print(post.owner_profile.userid)
 #+RESULTS:
 : 1800235509
 
-OK, now that we know how to grab all the info
+OK, now that we know how to grab the profile info, we can create a simple python script that will receive a shortcode and return the corresponding ID.
+This script will be called from a shell script, which will fetch the posts from the profile.
+This approach may seem counterintuitive at first, because we could do everything ourselves from inside the python script.
+It seems better to do this way---call =instaloader= from the shell script---because it is what worked best in the past, in terms of reliability.
+Let’s get to it, then:
+
 
 # Local Variables:
 # org-babel-python-command: "~/sci/100daysofpractice-dataset/venv/bin/python"
