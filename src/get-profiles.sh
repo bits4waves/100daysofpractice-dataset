@@ -13,5 +13,5 @@ while read SHORTCODE; do
     PAIR=$SHORTCODE,$USERNAME
     echo $PAIR
     echo $PAIR >> $CSV
-    instaloader  --login $IG_USER --fast-update $USERNAME
+    instaloader  --login $IG_USER --password $IG_PASSWORD --fast-update $USERNAME
 done <$SHORTCODES
