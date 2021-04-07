@@ -80,16 +80,18 @@ Let’s get to it, then:
 
 #+BEGIN_SRC python :tangle ../get-username.py
 import argparse
+import instaloader
 
 parser = argparse.ArgumentParser()
 parser.add_argument('shortcode')
 args = parser.parse_args()
 
-print(args.shortcode)
+I = instaloader.Instaloader()
+post = instaloader.Post.from_shortcode(I.context, args.shortcode)
+print(post.owner_profile.username)
 #+END_SRC
 
 #+RESULTS:
-
 
 # Local Variables:
 # org-babel-python-command: "~/sci/100daysofpractice-dataset/venv/bin/python"
