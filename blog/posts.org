@@ -35,6 +35,7 @@ First, lets open the file to read the shortcodes:
 #+BEGIN_SRC python
 import fileinput
 
-for line in fileinput.input('../shortcodes/shortcodes-uniq.txt):
+
+for line in fileinput.input('../shortcodes/shortcodes-uniq.txt'):
     print(line)
 #+END_SRC
