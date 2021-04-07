@@ -45,8 +45,7 @@ for line in fileinput.input('../shortcodes/shortcodes-uniq.txt'):
 #+END_EXAMPLE
 
 Now, let’s fetch the username for the post.
-This username will be necessary to fetch the data we need.
-To do this for the first shorcode we’ll need to run:
+To do this for the first shorcode we’ll run:
 
 #+BEGIN_EXAMPLE
 #!/usr/bin/env python
