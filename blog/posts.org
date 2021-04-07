@@ -12,19 +12,20 @@
 :ORDERED:  t
 :ID:       b9f761ad-3817-4179-a427-eacb08599e7e
 :POSTID:   364
+:POST_DATE: [2021-04-07 Wed 18:54]
 :END:
 
 Hello!
 
 Here at Bits4Waves things got a special detour yesterday.
-As it happens, dealing with all this data has been really exciting brain-teasing.
-This in turn resulted in a lot---literally dozens---of ideas.
-So yesterday there was a “pause-and-assess” moment to develop some tools to deal with this.
+Dealing with all this data turned out to be really brain-teasing!
+This resulted in a lot---literally dozens---of ideas and also questions.
+So yesterday there was a “pause-and-assess” moment to develop some tools to deal with all this info.
 (If you like Emacs and Org, you may love what happened!)
 
-But back to the matter at hand: the #100daysofpractice dataset!
+But back to the matter at hand: the =#100daysofpractice= dataset!
 After [[https://bits4waves.wordpress.com/?p=325][acquiring the shortcodes]], the next natural step would be to /explore/ it.
-We would like to know how they are spread through time, and some information about the practictioners!
+We would like to know how they are spread through time, and some information about the practictioners, along with a bunch of important details about music practice!
 But before that, we need to effectively use the shortcodes to gather this data.
 This is the objective for today!
 
@@ -41,8 +42,8 @@ for line in fileinput.input('../shortcodes/shortcodes-uniq.txt'):
     if (fileinput.lineno() == 10): break
 #+END_EXAMPLE
 
-Now, let’s fetch the handle for the post.
-This handle will be necessary to fetch the data.
+Now, let’s fetch the username for the post.
+This username will be necessary to fetch the data we need.
 To do this for the first shorcode we’ll need to run:
 
 #+BEGIN_EXAMPLE
@@ -54,7 +55,7 @@ post = instaloader.Post.from_shortcode(I.context, shortcode)
 print(post.owner_profile.username)
 #+END_EXAMPLE
 
-OK, now that we know how to grab the profile info, we can create a simple python script that will receive a shortcode and return the corresponding handle.
+OK, now that we know how to grab the profile info, we can create a simple python script that will receive a shortcode and return the corresponding username.
 This script will be called from a shell script, which will fetch the posts from the profile.
 This approach may seem counterintuitive at first, because we could do everything ourselves from inside the python script.
 It seems better to do this way---call =instaloader= from the shell script---because it is what worked best in the past, in terms of reliability.
@@ -73,7 +74,7 @@ post = instaloader.Post.from_shortcode(I.context, args.shortcode)
 print(post.owner_profile.username)
 #+END_EXAMPLE
 
-Now, we’ll create a shell script to fetch the handle for each one of the shortcodes, and then fetch the data:
+Now, we’ll create a shell script to fetch the username for each one of the shortcodes, and then fetch the data:
 
 #+BEGIN_EXAMPLE
 #!/bin/bash
@@ -82,7 +83,7 @@ PROJECT=~/sci/100daysofpractice-dataset
 PYTHON=$PROJECT/venv/bin/python
 SRC=$PROJECT/src
 GET_USERNAME="$PYTHON $SRC/get-username.py"
-SHORTCODES=$PROJECT/shortcodes/shortcodes-test.txt
+SHORTCODES=$PROJECT/shortcodes/shortcodes-uniq.txt
 PROFILES=$PROJECT/profiles
 CSV=$PROFILES/shortcode-username.csv
 

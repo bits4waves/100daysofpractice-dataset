@@ -4,7 +4,7 @@ PROJECT=~/sci/100daysofpractice-dataset
 PYTHON=$PROJECT/venv/bin/python
 SRC=$PROJECT/src
 GET_USERNAME="$PYTHON $SRC/get-username.py"
-SHORTCODES=$PROJECT/shortcodes/shortcodes-test.txt
+SHORTCODES=$PROJECT/shortcodes/shortcodes-uniq.txt
 PROFILES=$PROJECT/profiles
 CSV=$PROFILES/shortcode-username.csv
 
