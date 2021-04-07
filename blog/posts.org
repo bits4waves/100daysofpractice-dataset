@@ -66,3 +66,12 @@ post = Post.from_shortcode(I.context, '008-CMh_h-')
 #+END_SRC
 
 #+RESULTS:
+: Traceback (most recent call last):
+:   File "<stdin>", line 1, in <module>
+:   File "/tmp/babel-gxsaLR/python-Gb2dlI", line 1, in <module>
+:     import instaloader
+: ModuleNotFoundError: No module named 'instaloader'
+
+# Local Variables:
+# org-babel-python-command: ~/sci/100daysofpractice-dataset/venv/bin/python
+# End:
