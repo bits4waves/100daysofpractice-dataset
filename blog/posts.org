@@ -1,0 +1,40 @@
+#+ORG2BLOG
+
+* Fetch the data from the shortcodes
+:PROPERTIES:
+:BLOG: bits4waves
+:DATE: [2021-04-07 Wed 15:08]
+:OPTIONS: toc:nil num:nil todo:nil pri:nil tags:nil ^:nil
+:CATEGORY: Dataset
+:POST_TAGS: 100daysofpractice, dataset
+:END:
+:LOGBOOK:
+CLOCK: [2021-04-07 Wed 14:41]
+:END:
+
+[2021-04-07 Wed 14:40]
+
+Hello!
+
+Here at Bits4Waves things got a special detour yesterday.
+As it happens, dealing with all this data has been really exciting brain-teasing.
+This in turn resulted in a lot---literally dozens---of ideas.
+So yesterday there was a “pause-and-assess” moment to develop some tools to deal with this.
+(If you like Emacs and Org, you may love what happened!)
+
+But back to the matter at hand: the #100daysofpractice dataset!
+After [[https://bits4waves.wordpress.com/?p=325][acquiring the shortcodes]], the next natural step would be to /explore/ it.
+We would like to know how they are spread through time, and some information about the practictioners!
+But before that, we need to effectively use the shortcodes to gather this data.
+This is the objective for today!
+
+The idea is simple: we will go through the list of shortcodes, and, give the shortocodes one at a time to =instaloader=, asking for it to analyze the given shortcode and return the corresponding data (=instaloader= is a Python API that interfaces with Instagram).
+
+Let’s start!
+First, lets open the file to read the shortcodes:
+
+#+BEGIN_SRC python
+import fileinput
+for line in fileinput.input('../shortcodes/shortcodes-uniq.txt):
+    print(line)
+#+END_SRC
