@@ -12,6 +12,6 @@ while read SHORTCODE; do
     USERNAME=$($GET_USERNAME $SHORTCODE)
     PAIR=$SHORTCODE,$USERNAME
     echo $PAIR
-    echo $PAIR >> $CSVFILE
+    echo $PAIR >> $CSV
     instaloader $USERNAME
 done <$SHORTCODES
