@@ -61,8 +61,10 @@ Now, let’s test fetching the post data for the first shorcode:
 #+BEGIN_SRC python
 import instaloader
 
-I = Instaloader()
-post = Post.from_shortcode(I.context, '008-CMh_h-')
+shortcode = '008-CMh_h-'
+I = instaloader.Instaloader()
+post = instaloader.Post.from_shortcode(I.context, shortcode)
+
 #+END_SRC
 
 #+RESULTS:
