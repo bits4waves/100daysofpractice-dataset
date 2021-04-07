@@ -94,10 +94,6 @@ Now, we’ll create a shell script to fetch the handle for each one of the short
 
 #+BEGIN_SRC shell :tangle ../src/get-usernames.sh
 #!/bin/bash
-
-while read SHORTCODE; do
-    echo $SHORTCODE
-done </tmp/filelist.txt
 #+END_SRC
 
 # Local Variables:
