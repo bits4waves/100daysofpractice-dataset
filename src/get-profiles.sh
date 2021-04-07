@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PROJECT=~/sci/100daysofpractice-datase
+PROJECT=~/sci/100daysofpractice-dataset
 PYTHON=$PROJECT/venv/bin/python
 SRC=$PROJECT/src
 GET_USERNAME="$PYTHON $SRC/get-username.py"
