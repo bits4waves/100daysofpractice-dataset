@@ -90,6 +90,13 @@ print(post.owner_profile.username)
 
 #+RESULTS:
 
+Now, we’ll create a shell script to fetch the handle for each one of the shortcodes:
+
+#+BEGIN_SRC shell :tangle ../src/get-usernames.sh
+#!/bin/bash
+
+#+END_SRC
+
 # Local Variables:
 # org-babel-python-command: "~/sci/100daysofpractice-dataset/venv/bin/python"
 # End:
