@@ -56,9 +56,9 @@ B3AJLQHowA8
 B3PhP7_Iw1f
 #+end_example
 
-Now, let’s fetch the ID corresponding to the post’s profile.
-This ID will be necessary to fetch the post data.
-Let’s do this for the first shorcode:
+Now, let’s fetch the handle for the post.
+This handle will be necessary to fetch the data.
+To do this for the first shorcode we’ll need to run:
 
 #+BEGIN_SRC python
 import instaloader
@@ -66,13 +66,10 @@ import instaloader
 shortcode = '008-CMh_h-'
 I = instaloader.Instaloader()
 post = instaloader.Post.from_shortcode(I.context, shortcode)
-print(post.owner_profile.userid)
+print(post.owner_profile.username)
 #+END_SRC
 
-#+RESULTS:
-: 1800235509
-
-OK, now that we know how to grab the profile info, we can create a simple python script that will receive a shortcode and return the corresponding ID.
+OK, now that we know how to grab the profile info, we can create a simple python script that will receive a shortcode and return the corresponding handle.
 This script will be called from a shell script, which will fetch the posts from the profile.
 This approach may seem counterintuitive at first, because we could do everything ourselves from inside the python script.
 It seems better to do this way---call =instaloader= from the shell script---because it is what worked best in the past, in terms of reliability.
