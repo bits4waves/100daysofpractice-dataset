@@ -1,0 +1,249 @@
+* DONE #100daysofpractice dataset: shortcodes arrived! :hack:100daysofpractice::
+:PROPERTIES:
+:BLOG:     bits4waves
+:DATE: [2021-04-05 Mon 19:37]
+:OPTIONS: toc:nil num:nil todo:nil pri:nil tags:nil ^:nil
+:CATEGORY: Blog
+:POST_TAGS: 100daysofpractice, dataset
+:ID:       o2b:040d55e4-5205-40c6-b73a-2cb20c636051
+:ORDERED:  t
+:POSTID:   325
+:POST_DATE: [2021-04-05 Mon 20:06]
+:END:
+:LOGBOOK:
+CLOCK: [2021-04-05 Mon 19:38]--[2021-04-05 Mon 21:05] =>  1:27
+CLOCK: [2021-04-05 Mon 18:37]--[2021-04-05 Mon 19:37] =>  1:00
+CLOCK: [2021-04-05 Mon 18:29]--[2021-04-05 Mon 18:31] =>  0:02
+CLOCK: [2021-04-05 Mon 18:06]--[2021-04-05 Mon 18:29] =>  0:23
+:END:
+
+Hello!
+How have you been?
+
+Here at Bits4Waves we have been working on a new dataset!
+This is very exciting, as this is the very first dataset we’ll produce for the community!
+It will be all about Music, especially Resonance...
+But that will have to wait a bit more before it’s revealed to the world...
+
+We’ve been busy collecting some links to videos of... practice!
+Specifically, links to Instagram posts with the hashtag =#100daysofpractice=!
+More specifically, what is called a /shortcode/: small strings that uniquely identify a post.
+
+For instance the very first post with the hashtag =#100daysofpractice= has the shortcode =BTrwiUuh8vV=.
+This means that you can access it with the link https://www.instagram.com/p/BTrwiUuh8vV.
+You can see that it was posted by the creator of the hashtag, =@violincase=, an account that belongs to the violin virtuosa Hilary Hahn.
+
+So, after collecting lots of shortcodes, today’s task is to grab them all and uniquify them.
+Several duplicates are expected to have gotten into the pool!
+This happened because the [[https://github.com/bits4waves/100daysofpractice-dataset/blob/master/Makefile][process used to obtain it]] was interrupted by the server several times.
+At each new try, it had to restart from the beginning, but the previous results were kept in the file because the results could change at each new attempt.
+
+The idea is to use the command =uniq=:
+
+#+BEGIN_SRC shell
+uniq --version
+#+END_SRC
+
+#+RESULTS:
+: uniq (GNU coreutils) 8.30
+: Copyright (C) 2018 Free Software Foundation, Inc.
+: License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+: This is free software: you are free to change and redistribute it.
+: There is NO WARRANTY, to the extent permitted by law.
+:
+: Written by Richard M. Stallman and David MacKenzie.
+
+First, let’s create a new branch =uniq= for this.
+
+#+BEGIN_SRC shell
+alias git="git -C ~/sci/100daysofpractice-dataset/"
+git checkout -b uniq master
+git branch
+#+END_SRC
+
+#+RESULTS:
+:   master
+: * uniq
+
+Now let’s use =wc=
+
+#+BEGIN_SRC shell
+wc --version
+#+END_SRC
+
+#+RESULTS:
+: wc (GNU coreutils) 8.30
+: Copyright (C) 2018 Free Software Foundation, Inc.
+: License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+: This is free software: you are free to change and redistribute it.
+: There is NO WARRANTY, to the extent permitted by law.
+:
+: Written by Paul Rubin and David MacKenzie.
+
+to count the lines in the file:
+
+#+BEGIN_SRC shell
+wc -l ~/sci/100daysofpractice-dataset/shortcodes.txt
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+wc (GNU coreutils) 8.30
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Paul Rubin and David MacKenzie.
+
+
+And the number of lines is:
+103198 /home/rafa/sci/100daysofpractice-dataset/shortcodes.txt
+#+end_example
+
+OK, so we got in total 103,198 shorcodes!
+That’s a lot, but I wonder how many of these are duplicates…
+
+We’ll use the command =uniq= to deal with duplicate lines, but according to its its manual page, it:
+
+#+BEGIN_EXAMPLE
+Filter[s]  adjacent  matching lines from INPUT (or standard
+input), writing to OUTPUT (or standard output).
+#+END_EXAMPLE
+
+“adjacent” being the important detail here: we cannot guarantee that the duplicates will be adjacent to one another!
+We can’t just got using =uniq= directly like that!
+
+But this is simple to solve, we just have to sort it first.
+For this we can use the command =sort=.
+According to its manual, we have:
+
+#+BEGIN_EXAMPLE
+‘sort’ sorts, merges, or compares all the lines from the given files, or
+standard input if none are given or for a FILE of ‘-’.  By default,
+‘sort’ writes the results to standard output.  Synopsis:
+#+END_EXAMPLE
+
+Let’s give a pick into the first 10 lines of the file, using the command =head=
+
+#+BEGIN_SRC shell
+head --version
+#+END_SRC
+
+#+RESULTS:
+: head (GNU coreutils) 8.30
+: Copyright (C) 2018 Free Software Foundation, Inc.
+: License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+: This is free software: you are free to change and redistribute it.
+: There is NO WARRANTY, to the extent permitted by law.
+:
+: Written by David MacKenzie and Jim Meyering.
+
+for that:
+
+#+BEGIN_SRC shell
+head -n 10 ~/sci/100daysofpractice-dataset/shortcodes.txt
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+CNOKrJ0Amoq
+CNOKj65nDUa
+CNOKgRBhhZa
+CNOKA_0pws8
+CNOJtmAjBnc
+CNOIdxfAvLd
+CNOIsphA9-P
+CNOJIqPA13s
+CNOIr6sAs96
+CNOIUoyHGgC
+#+end_example
+
+Okidoki...
+Now let’s =sort= the file, and put the results into a separate file:
+
+#+BEGIN_SRC shell
+FOLDER=~/sci/100daysofpractice-dataset
+sort $FOLDER/shortcodes.txt > $FOLDER/shortcodes-sort.txt
+#+END_SRC
+
+#+RESULTS:
+
+Just for sanity check, let’s see how many lines does each file have:
+
+#+BEGIN_SRC shell
+FOLDER=~/sci/100daysofpractice-dataset
+wc -l $FOLDER/shortcodes.txt
+wc -l $FOLDER/shortcodes-sort.txt
+#+END_SRC
+
+#+RESULTS:
+: 103198 /home/rafa/sci/100daysofpractice-dataset/shortcodes.txt
+: 103198 /home/rafa/sci/100daysofpractice-dataset/shortcodes-sort.txt
+
+OK...
+Now let’s pass thes sorted file through =uniq=:
+
+#+BEGIN_SRC shell
+FOLDER=~/sci/100daysofpractice-dataset
+uniq $FOLDER/shortcodes-sort.txt > $FOLDER/shortcodes-uniq.txt
+#+END_SRC
+
+#+RESULTS:
+
+Now let’s use count the lines:
+
+#+BEGIN_SRC shell
+FOLDER=~/sci/100daysofpractice-dataset
+wc -l $FOLDER/shortcodes-uniq.txt
+#+END_SRC
+
+#+RESULTS:
+: 57287 /home/rafa/sci/100daysofpractice-dataset/shortcodes-uniq.txt
+
+Wow...
+That’s a /lot/ less lines!
+The original file has 103,198 lines.
+If we subtract from this number the resulting 57,287 unique lines, we see that the number of repeated lines in the original file is 45,911.
+It was indeed a /lot/ of attempts to get there though, thus the repetition!
+
+Now back to the file...
+Let’s try some random entries to see if they work as they should...
+We will use the command =shuf=
+
+#+BEGIN_SRC shell
+shuf --version
+#+END_SRC
+
+#+RESULTS:
+: shuf (GNU coreutils) 8.30
+: Copyright (C) 2018 Free Software Foundation, Inc.
+: License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+: This is free software: you are free to change and redistribute it.
+: There is NO WARRANTY, to the extent permitted by law.
+:
+: Written by Paul Eggert.
+
+to get some random lines from the file:
+
+#+BEGIN_SRC shell
+FOLDER=~/sci/100daysofpractice-dataset
+shuf -n 10 $FOLDER/shortcodes-uniq.txt
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+CMYJSQxA59o
+CL23AeTpvy7
+CM_DjEyncPI
+CLHuYI_gBJZ
+CK9TFtKgOAM
+CMbammOj9Lv
+CKK7gK1FAiM
+CMJJ9IYARgL
+CMyAt4Xgtgp
+CK8-g-IDxGu
+#+end_example
+
+Well, that’s it for today!
+See you soon!
