@@ -4,7 +4,7 @@
 
 * Fetch the data from the shortcodes
 :PROPERTIES:
-:BLOG: bits4waves
+:BLOG:     bits4waves
 :DATE: [2021-04-07 Wed 15:08]
 :OPTIONS: toc:nil num:nil todo:nil pri:nil tags:nil ^:nil
 :CATEGORY: Dataset
@@ -12,8 +12,6 @@
 :ORDERED:  t
 :ID:       b9f761ad-3817-4179-a427-eacb08599e7e
 :END:
-
-[2021-04-07 Wed 14:40]
 
 Hello!
 
