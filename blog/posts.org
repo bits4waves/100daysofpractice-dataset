@@ -33,40 +33,26 @@ The idea is simple: we will go through the list of shortcodes, and, give the sho
 Let’s start!
 First, lets open the file to read the shortcodes:
 
-#+BEGIN_SRC python
+#+BEGIN_EXAMPLE
 import fileinput
 
 for line in fileinput.input('../shortcodes/shortcodes-uniq.txt'):
     print(line, end='')
     if (fileinput.lineno() == 10): break
-#+END_SRC
-
-#+RESULTS:
-#+begin_example
-008-CMh_h-
-B04EyxhDwXR
-B0aquSqCrYD
-B0-EC3BleBG
-B21M_FGInYY
-B23odpWoM1l
-B2izkXAoKEH
-B2RCWgmIgMZ
-B3AJLQHowA8
-B3PhP7_Iw1f
-#+end_example
+#+END_EXAMPLE
 
 Now, let’s fetch the handle for the post.
 This handle will be necessary to fetch the data.
 To do this for the first shorcode we’ll need to run:
 
-#+BEGIN_SRC python
+#+BEGIN_EXAMPLE
 import instaloader
 
 shortcode = '008-CMh_h-'
 I = instaloader.Instaloader()
 post = instaloader.Post.from_shortcode(I.context, shortcode)
 print(post.owner_profile.username)
-#+END_SRC
+#+END_EXAMPLE
 
 OK, now that we know how to grab the profile info, we can create a simple python script that will receive a shortcode and return the corresponding handle.
 This script will be called from a shell script, which will fetch the posts from the profile.
@@ -74,7 +60,7 @@ This approach may seem counterintuitive at first, because we could do everything
 It seems better to do this way---call =instaloader= from the shell script---because it is what worked best in the past, in terms of reliability.
 Let’s get to it, then:
 
-#+BEGIN_SRC python :tangle ../src/get-username.py
+#+BEGIN_EXAMPLE
 import argparse
 import instaloader
 
@@ -85,13 +71,11 @@ args = parser.parse_args()
 I = instaloader.Instaloader()
 post = instaloader.Post.from_shortcode(I.context, args.shortcode)
 print(post.owner_profile.username)
-#+END_SRC
-
-#+RESULTS:
+#+END_EXAMPLE
 
 Now, we’ll create a shell script to fetch the handle for each one of the shortcodes, and then fetch the data:
 
-#+BEGIN_SRC shell :tangle ../src/get-usernames.sh
+#+BEGIN_EXAMPLE
 #!/bin/bash
 
 PROJECT=~/sci/100daysofpractice-dataset
@@ -109,7 +93,9 @@ while read SHORTCODE; do
     echo $PAIR >> $CSV
     instaloader $USERNAME
 done <$SHORTCODES
-#+END_SRC
+#+END_EXAMPLE
+
+This file will then download the necessary data!
 
 # Local Variables:
 # org-babel-python-command: "~/sci/100daysofpractice-dataset/venv/bin/python"
