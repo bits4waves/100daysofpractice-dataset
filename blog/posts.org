@@ -8,9 +8,6 @@
 :CATEGORY: Dataset
 :POST_TAGS: 100daysofpractice, dataset
 :END:
-:LOGBOOK:
-CLOCK: [2021-04-07 Wed 14:41]
-:END:
 
 [2021-04-07 Wed 14:40]
 
