@@ -80,16 +80,7 @@ Let’s get to it, then:
 
 #+BEGIN_SRC python
 import argparse
-import instaloader
 
-parser = argparse.ArgumentParser(description= 'Return the username given a shortcode.')
-parser.add_argument('integers', metavar='N', type=int, nargs='+',
-                   help='an integer for the accumulator')
-
-shortcode = '008-CMh_h-'
-I = instaloader.Instaloader()
-post = instaloader.Post.from_shortcode(I.context, shortcode)
-print(post.owner_profile.userid)
 #+END_SRC
 
 #+RESULTS:
