@@ -55,7 +55,7 @@ B3AJLQHowA8
 B3PhP7_Iw1f
 #+end_example
 
-Now, let’s test fetching the data for the first shorcode:
+Now, let’s test fetching the post data for the first shorcode:
 
 #+BEGIN_SRC 
 
