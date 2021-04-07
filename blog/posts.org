@@ -24,8 +24,8 @@ So yesterday there was a “pause-and-assess” moment to develop some tools to 
 (If you like Emacs and Org, you may love what happened!)
 
 But back to the matter at hand: the =#100daysofpractice= dataset!
-After [[https://bits4waves.wordpress.com/?p=325][acquiring the shortcodes]], the next natural step would be to /explore/ it.
-We would like to know how they are spread through time, and some information about the practictioners, along with a bunch of important details about music practice!
+After [[https://bits4waves.wordpress.com/?p=325][acquiring the shortcodes]], the next natural step would be to /explore/ the data.
+We would like to know, for instance, how they are spread through time, and some information about the practictioners, along with a bunch of important details about music practice!
 But before that, we need to effectively use the shortcodes to gather this data.
 This is the objective for today!
 
