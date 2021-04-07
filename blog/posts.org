@@ -35,7 +35,6 @@ First, lets open the file to read the shortcodes:
 #+BEGIN_SRC python :results output pp
 import fileinput
 
-
 for line in fileinput.input('../shortcodes/shortcodes-uniq.txt'):
     print(line, end='')
     if (fileinput.lineno() == 10): break
@@ -54,5 +53,3 @@ B2RCWgmIgMZ
 B3AJLQHowA8
 B3PhP7_Iw1f
 #+end_example
-
-
