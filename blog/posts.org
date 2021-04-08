@@ -171,20 +171,10 @@ We have to make some accomodations for the new place inside the =Makefile=.
 First, it needs the correct Python virtual environment.
 Let’s get the appropriate command for that.
 
-#+BEGIN_SRC shell :session *shell*
-SHORTCODES=$PROJECT/shortcodes
-pushd $SHORTCODES
-source $PROJECT/venv/bin/activate
-instaloader --version
-#+END_SRC
+#+BEGIN_EXAMPLE
+PYTHON=../venv/bin/python
+#+END_EXAMPLE
 
-#+RESULTS:
-: 
-: ~/sci/100daysofpractice-dataset/shortcodes ~/sci/100daysofpractice-dataset/shortcodes ~/sci/100daysofpractice-dataset/shortcodes ~/sci/100daysofpractice-dataset ~/sci/100daysofpractice-dataset ~/sci/100daysofpractice-dataset ~/sci/100daysofpractice-dataset ~/sci/100daysofpractice-dataset/blog
-: (venv) rafa@bach:~/sci/100daysofpractice-dataset/shortcodes$ 4.7.1
-
-Okidoki.
-Let’s add it to the =Makefile=:
 Now, the command inside the =Makefile= is not correct, we need to fix it:
 
 #+BEGIN_EXAMPLE
@@ -195,17 +185,34 @@ To get the shortcodes, we used the script [[file:~/sci/100daysofpractice-dataset
 Let’s fix that:
 
 #+BEGIN_EXAMPLE
-ifndef IG_USER
-$(error IG_USER is not set)
-endif
-
-all: dataset
-
-dataset:
-	source ../venv/bin/activate
-	python get-shortcodes.py
-
-clean:
-	rm -rf \#100daysofpractice/
+SRC=../src
 #+END_EXAMPLE
 
+and
+
+#+BEGIN_EXAMPLE
+$(PYTHON) $(SRC)/get-shortcodes.py
+#+END_EXAMPLE
+
+=get-shortcodes.py=ῶis not currently accomodating for the OCD, as it creates the file =shortcodes.txt= instead of =shortcodes-orig.txt=:
+
+#+BEGIN_EXAMPLE
+import instaloader
+import time
+import os
+
+I = instaloader.Instaloader()
+I.interactive_login(os.getenv('IG_USER'))
+query = instaloader.Hashtag.from_name(I.context, '100daysofpractice')
+k = 1
+for post in query.get_all_posts():
+    print(k)
+    shortcode = post.shortcode
+    print(shortcode)
+    with open('shortcodes.txt', 'a') as file_object:
+        file_object.write(shortcode + '\n')
+    time.sleep(1)
+    k += 1
+#+END_EXAMPLE
+
+Let’s fix that...
