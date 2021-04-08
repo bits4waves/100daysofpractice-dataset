@@ -162,11 +162,28 @@ Let’s move it to the =shortcodes/= folder:
 Please share your thoughts in the comments below!)
 
 #+BEGIN_SRC shell :session *shell*
-PROJECT=~/sci/100daysofpractice-dataset/
+PROJECT=~/sci/100daysofpractice-dataset
 git mv Makefile shortcodes/
 pushd $PROJECT
 #+END_SRC
 
+We have to make some accomodations for the new place inside the Makefile.
+First, it needs the correct Python virtual environment.
+Let’s get the appropriate command for that.
+
+#+BEGIN_SRC shell :session *shell*
+SHORTCODES=$PROJECT/shortcodes
+pushd $SHORTCODES
+source $PROJECT/venv/bin/activate
+instaloader --version
+#+END_SRC
+
 #+RESULTS:
 : 
-: rafa@bach:~/sci/100daysofpractice-dataset$ ~/sci/100daysofpractice-dataset ~/sci/100daysofpractice-dataset ~/sci/100daysofpractice-dataset ~/sci/100daysofpractice-dataset/blog
+: ~/sci/100daysofpractice-dataset/shortcodes ~/sci/100daysofpractice-dataset/shortcodes ~/sci/100daysofpractice-dataset/shortcodes ~/sci/100daysofpractice-dataset ~/sci/100daysofpractice-dataset ~/sci/100daysofpractice-dataset ~/sci/100daysofpractice-dataset ~/sci/100daysofpractice-dataset/blog
+: (venv) rafa@bach:~/sci/100daysofpractice-dataset/shortcodes$ 4.7.1
+
+Okidoki.
+Let’s add it to the Makefile:
+
+

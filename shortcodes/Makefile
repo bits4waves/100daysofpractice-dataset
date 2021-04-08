@@ -5,6 +5,7 @@ endif
 all: dataset
 
 dataset:
+	source ../venv/bin/activate
 	instaloader --login ${IG_USER} --no-profile-pic --no-pictures --no-videos --no-captions "#100daysofpractice"
 
 clean:
