@@ -163,11 +163,11 @@ Please share your thoughts in the comments below!)
 
 #+BEGIN_SRC shell :session *shell*
 PROJECT=~/sci/100daysofpractice-dataset/
+git mv Makefile shortcodes/
 pushd $PROJECT
 
 #+END_SRC
 
 #+RESULTS:
 : 
-: ~/sci/100daysofpractice-dataset ~/sci/100daysofpractice-dataset/blog
-: /home/rafa/sci/100daysofpractice-dataset
+: rafa@bach:~/sci/100daysofpractice-dataset$ ~/sci/100daysofpractice-dataset ~/sci/100daysofpractice-dataset ~/sci/100daysofpractice-dataset ~/sci/100daysofpractice-dataset/blog
