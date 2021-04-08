@@ -165,7 +165,6 @@ Please share your thoughts in the comments below!)
 PROJECT=~/sci/100daysofpractice-dataset/
 git mv Makefile shortcodes/
 pushd $PROJECT
-
 #+END_SRC
 
 #+RESULTS:
