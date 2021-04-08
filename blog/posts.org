@@ -167,7 +167,7 @@ git mv Makefile shortcodes/
 pushd $PROJECT
 #+END_SRC
 
-We have to make some accomodations for the new place inside the Makefile.
+We have to make some accomodations for the new place inside the =Makefile=.
 First, it needs the correct Python virtual environment.
 Let’s get the appropriate command for that.
 
@@ -184,6 +184,28 @@ instaloader --version
 : (venv) rafa@bach:~/sci/100daysofpractice-dataset/shortcodes$ 4.7.1
 
 Okidoki.
-Let’s add it to the Makefile:
+Let’s add it to the =Makefile=:
+Now, the command inside the =Makefile= is not correct, we need to fix it:
 
+#+BEGIN_EXAMPLE
+instaloader --login ${IG_USER} --no-profile-pic --no-pictures --no-videos --no-captions "#100daysofpractice"
+#+END_EXAMPLE
+
+To get the shortcodes, we used the script [[file:~/sci/100daysofpractice-dataset/src/get-shortcodes.py][get-shortcodes.py]].
+Let’s fix that:
+
+#+BEGIN_EXAMPLE
+ifndef IG_USER
+$(error IG_USER is not set)
+endif
+
+all: dataset
+
+dataset:
+	source ../venv/bin/activate
+	python get-shortcodes.py
+
+clean:
+	rm -rf \#100daysofpractice/
+#+END_EXAMPLE
 
