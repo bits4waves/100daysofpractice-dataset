@@ -5,9 +5,9 @@ endif
 PYTHON=../venv/bin/python
 SRC=../src
 
-all: dataset
+all: shortcodes
 
-dataset:
+shortcodes:
 	$(PYTHON) $(SRC)/get-shortcodes.py
 
 clean:
