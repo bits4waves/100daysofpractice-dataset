@@ -10,7 +10,7 @@ for post in query.get_all_posts():
     print(k)
     shortcode = post.shortcode
     print(shortcode)
-    with open('shortcodes.txt', 'a') as file_object:
+    with open('shortcodes-orig.txt', 'a') as file_object:
         file_object.write(shortcode + '\n')
     time.sleep(1)
     k += 1
