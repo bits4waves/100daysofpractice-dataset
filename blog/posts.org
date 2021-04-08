@@ -114,9 +114,9 @@ This file will then download the necessary data!
 :OPTIONS: toc:nil num:nil todo:nil pri:nil tags:nil ^:nil
 :CATEGORY: Blog
 :POST_TAGS: 100daysofpractice, hack, replicability, science
-:ID:       o2b:20f4ba67-bdd1-49c6-b848-453e501f86c7
-:POST_DATE: [2021-04-08 Thu 17:18]
-:POSTID:   377
+:ID:       o2b:d0179640-0fe5-4920-9e8f-cf62b6f34af2
+:POST_DATE: [2021-04-08 Thu 18:25]
+:POSTID:   384
 :END:
 
 Hello!
@@ -161,11 +161,11 @@ Let’s move it to the =shortcodes/= folder:
 (We’ll not use a script for this, but document it here, because this is a /structural/ change, that should /really/ be done once---meaning, it doesn’t /deserve/ a script of its own...
 Please share your thoughts in the comments below!)
 
-#+BEGIN_SRC shell :session *shell*
+#+BEGIN_EXAMPLE
 PROJECT=~/sci/100daysofpractice-dataset
 git mv Makefile shortcodes/
 pushd $PROJECT
-#+END_SRC
+#+END_EXAMPLE
 
 We have to make some accomodations for the new place inside the =Makefile=.
 First, it needs the correct Python virtual environment.
@@ -216,3 +216,30 @@ for post in query.get_all_posts():
 #+END_EXAMPLE
 
 Let’s fix that...
+
+#+BEGIN_EXAMPLE
+import instaloader
+import time
+import os
+
+I = instaloader.Instaloader()
+I.interactive_login(os.getenv('IG_USER'))
+query = instaloader.Hashtag.from_name(I.context, '100daysofpractice')
+k = 1
+for post in query.get_all_posts():
+    print(k)
+    shortcode = post.shortcode
+    print(shortcode)
+    with open('shortcodes-orig.txt', 'a') as file_object:
+        file_object.write(shortcode + '\n')
+    time.sleep(1)
+    k += 1
+#+END_EXAMPLE
+
+Done!
+
+And I think we’ll call it a day!
+My dinner is getting colder here LOL
+
+See you soon!
+Take care!
