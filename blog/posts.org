@@ -305,3 +305,11 @@ It would also be nice to
 - [X] add target for sort file
 - [X] add target for uniq file
 - [X] update the =clean= target to reflect the changes
+
+Something very important is to update the instructions on how to obtain the several shortcode files.
+- [X] Use Org format for the main README
+- [ ] have the instructions in the main README
+- [ ] add description of the shortcodes
+- [ ] add quick installation instructions
+- [ ] add a usage example
+- [ ] set environment variables for Instagram user and password
