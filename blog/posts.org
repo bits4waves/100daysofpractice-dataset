@@ -302,7 +302,7 @@ It would also be nice to
 - [X] change the name of the target to reflect the output filename
 - [X] add target for test file; get it directly from the original
 - [X] add target for sort file
-- [ ] add target for uniq file
+- [X] add target for uniq file
 - [ ] add remaining target files
 - [ ] update the =clean= target to reflect the changes
 - [ ] use variables for filenames

@@ -20,7 +20,8 @@ shortcodes-test: $(SHORTCODES_ORIG)
 shortcodes-sort: $(SHORTCODES_ORIG)
 	sort $(SHORTCODES_ORIG) > $(SHORTCODES_SORT)
 
-shortcodes-uniq:
+shortcodes-uniq: $(SHORTCODES_SORT)
+	uniq $(SHORTCODES_SORT) > $(SHORTCODES_UNIQ)
 
 clean:
 	rm -rf \#100daysofpractice/
