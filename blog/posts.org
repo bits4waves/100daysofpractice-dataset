@@ -243,3 +243,163 @@ My dinner is getting colder here LOL
 
 See you soon!
 Take care!
+* Let’s Make(file) it more replicable! Part 2
+:PROPERTIES:
+:BLOG:     eglur@bits4waves
+:DATE: [2021-04-08 Thu 17:17]
+:OPTIONS: toc:nil num:nil todo:nil pri:nil tags:nil ^:nil
+:CATEGORY: Blog
+:POST_TAGS: 100daysofpractice, hack, replicability, science
+:ID:       o2b:d0179640-0fe5-4920-9e8f-cf62b6f34af2
+:POST_DATE: [2021-04-08 Thu 18:25]
+:POSTID:   384
+:END:
+
+Hello back!
+So, to make things more replicable, [[http://bits4waves.wordpress.com/?p=384][yesterday we worked on the Makefile]].
+Today we’ll continue this work!
+
+In retrospect, I realized it’s not the best practice to set the Python virtual environment in the Makefile, as not every user may want to do that (or maybe not specifically that way.)
+Let’s start fixing that:
+
+#+BEGIN_EXAMPLE
+ifndef IG_USER
+$(error IG_USER is not set)
+endif
+
+PYTHON=../venv/bin/python
+SRC=../src
+
+all: shortcodes
+
+shortcodes:
+	$(PYTHON) $(SRC)/get-shortcodes.py
+
+clean:
+	rm -rf \#100daysofpractice/
+
+#+END_EXAMPLE
+
+I’m Eglur, and this is my first authored post here (all the previous ones were also written by me, but this is the first with my name, so I felt it was appropriate to introduce myself).
+Nice to meet you!
+How have you been?
+
+Now where were we...?
+Oh yes, replicability!
+Here at Bits4Waves we take Sciencing very seriously!
+The most important premise is that we have to have massive fun in the process!
+But this does not mean that we shouldn’t follow some guidelines...
+
+One very important component of the [[https://en.wikipedia.org/wiki/Scientific_method][Scientific Method]] is that of /replicability/: other people may be able to obtain the same results if they apply the same methodology.
+The course [[https://www.edx.org/course/principles-statistical-and-computational-tools-for][Principles, Statistical and Computational Tools for Reproducible Data Science]] gives a very useful practical tip: avoid doing things /manually/; instead, create /scripts/ for everything.
+
+We’ve been running some commands manually, and now is a good time to create a “script” for them.
+Specifically, we’ll create a =Makefile= to generate the shortcodes.
+
+The =Makefile= needs a =recipe= to obtain each =target=.
+Let’s review [[https://bits4waves.wordpress.com/?p=325][how we got each one of the targets]]:
+
+1. =shortcodes-orig.txt=: [[https://github.com/bits4waves/100daysofpractice-dataset/blob/master/Makefile][used a dedicated =Makefile=]]
+2. =shortcodes-sort.txt=: ran commands manually
+3. =shortcodes-uniq.txt=: ran commands manually
+4. =shortcodes-test.txt=: ran commands manually
+
+Nothing like getting some perspective, huh?!
+It looks like we /started/ things well, and... derailed a little bit afterwards.
+Nothing to worry, though!
+Let’s fix it right away!
+
+As we already have a =Makefile=, it seems natural to use it---we just have to include the remaining targets---=shortcodes-sort.txt=, =shortcodes-test.txt=, and =shortcodes-uniq.txt=.
+
+But some things changed after the =Makefile= was created---the plot thickens:
+- the =shortcode-= files earned the right to have their own folder =shortcodes/=
+- the original file was renamed from =shortcode.txt= to =shortcode-orig.txt= (because OCD, that’s why :-).
+Therefore, we’ll have to account for these changes while dealing with reconciling past, present and near future.
+
+Practically, we should have the =Makefile= in its proper context.
+Let’s move it to the =shortcodes/= folder:
+(We’ll not use a script for this, but document it here, because this is a /structural/ change, that should /really/ be done once---meaning, it doesn’t /deserve/ a script of its own...
+Please share your thoughts in the comments below!)
+
+#+BEGIN_EXAMPLE
+PROJECT=~/sci/100daysofpractice-dataset
+git mv Makefile shortcodes/
+pushd $PROJECT
+#+END_EXAMPLE
+
+We have to make some accomodations for the new place inside the =Makefile=.
+First, it needs the correct Python virtual environment.
+Let’s get the appropriate command for that.
+
+#+BEGIN_EXAMPLE
+PYTHON=../venv/bin/python
+#+END_EXAMPLE
+
+Now, the command inside the =Makefile= is not correct, we need to fix it:
+
+#+BEGIN_EXAMPLE
+instaloader --login ${IG_USER} --no-profile-pic --no-pictures --no-videos --no-captions "#100daysofpractice"
+#+END_EXAMPLE
+
+To get the shortcodes, we used the script [[file:~/sci/100daysofpractice-dataset/src/get-shortcodes.py][get-shortcodes.py]].
+Let’s fix that:
+
+#+BEGIN_EXAMPLE
+SRC=../src
+#+END_EXAMPLE
+
+and
+
+#+BEGIN_EXAMPLE
+$(PYTHON) $(SRC)/get-shortcodes.py
+#+END_EXAMPLE
+
+=get-shortcodes.py=ῶis not currently accomodating for the OCD, as it creates the file =shortcodes.txt= instead of =shortcodes-orig.txt=:
+
+#+BEGIN_EXAMPLE
+import instaloader
+import time
+import os
+
+I = instaloader.Instaloader()
+I.interactive_login(os.getenv('IG_USER'))
+query = instaloader.Hashtag.from_name(I.context, '100daysofpractice')
+k = 1
+for post in query.get_all_posts():
+    print(k)
+    shortcode = post.shortcode
+    print(shortcode)
+    with open('shortcodes.txt', 'a') as file_object:
+        file_object.write(shortcode + '\n')
+    time.sleep(1)
+    k += 1
+#+END_EXAMPLE
+
+Let’s fix that...
+
+#+BEGIN_EXAMPLE
+import instaloader
+import time
+import os
+
+I = instaloader.Instaloader()
+I.interactive_login(os.getenv('IG_USER'))
+query = instaloader.Hashtag.from_name(I.context, '100daysofpractice')
+k = 1
+for post in query.get_all_posts():
+    print(k)
+    shortcode = post.shortcode
+    print(shortcode)
+    with open('shortcodes-orig.txt', 'a') as file_object:
+        file_object.write(shortcode + '\n')
+    time.sleep(1)
+    k += 1
+#+END_EXAMPLE
+
+Done!
+
+And I think we’ll call it a day!
+My dinner is getting colder here LOL
+
+See you soon!
+Take care!
