@@ -5,9 +5,9 @@ endif
 PYTHON=python
 SRC=../src
 
-all: shortcodes
+all: shortcodes-orig
 
-shortcodes:
+shortcodes-orig:
 	$(PYTHON) $(SRC)/get-shortcodes.py
 
 clean:
