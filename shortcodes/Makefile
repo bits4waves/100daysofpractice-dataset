@@ -24,4 +24,4 @@ shortcodes-uniq: $(SHORTCODES_SORT)
 	uniq $(SHORTCODES_SORT) > $(SHORTCODES_UNIQ)
 
 clean:
-	rm -rf \#100daysofpractice/
+	rm -rf $(SHORTCODES_ORIG) $(SHORTCODES_TEST) $(SHORTCODES_SORT) $(SHORTCODES_UNIQ)
