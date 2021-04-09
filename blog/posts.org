@@ -299,5 +299,5 @@ clean:
 #+END_EXAMPLE
 
 It would also be nice to
-- change the name of the target to reflect the output filename
-- update the =clean= target to reflect the changes
+- [X] change the name of the target to reflect the output filename
+- [ ] update the =clean= target to reflect the changes
