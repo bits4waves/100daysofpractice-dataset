@@ -1,8 +1,12 @@
 Instagram posts with the hashtag "#100daysofpractice".
 
 The file [[https://github.com/bits4waves/100daysofpractice-dataset/blob/master/shortcodes/shortcodes-uniq.txt][shortcodes-uniq.txt]] contains a list of =shortcodes= of instagram posts that contain the hashtag “#100daysofpractice”.
-See [[https://github.com/bits4waves/100daysofpractice-dataset/blob/master/shortcodes/Makefile][Makefile]] and [[https://github.com/bits4waves/100daysofpractice-dataset/blob/master/shortcodes/README.org][the README file]] for instructions on how they were obtained.
 
+To access the post given a shortcode, just paste the shortcode after =https://www.instagram.com/p/=.
+For instance the first post with the hashtag =#100daysofpractice= has the shortcode =BTrwiUuh8vV=, hence you may access it with via the link https://www.instagram.com/p/BTrwiUuh8vV.
+It was posted by the creator of the hashtag, =@violincase=, the violin virtuosa Hilary Hahn.
+
+See [[https://github.com/bits4waves/100daysofpractice-dataset/blob/master/shortcodes/Makefile][Makefile]] and the [[https://github.com/bits4waves/100daysofpractice-dataset/blob/master/shortcodes/README.org][README]] for instructions on how they were obtained.
 If you’d like to replicate the process by which they were obtained, you could run this on a terminal:
 
 #+BEGIN_EXAMPLE
@@ -17,7 +21,3 @@ cd shortcodes
 make clean
 make
 #+END_EXAMPLE
-
-The command below will fetch a random shortcode from
-the file
-and return the link for the corresponding post:
