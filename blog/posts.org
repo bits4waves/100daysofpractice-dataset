@@ -300,7 +300,9 @@ clean:
 
 It would also be nice to
 - [X] change the name of the target to reflect the output filename
-- [ ] use variables for filenames
 - [X] add target for test file; get it directly from the original
-- [ ] update the =clean= target to reflect the changes
+- [ ] add target for sort file
+- [ ] add target for uniq file
 - [ ] add remaining target files
+- [ ] update the =clean= target to reflect the changes
+- [ ] use variables for filenames
