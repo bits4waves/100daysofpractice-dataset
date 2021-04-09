@@ -2,6 +2,8 @@
 #+PROPERTY: header-args :results output pp
 #+PROPERTY: header-args:python :session *python*
 
+Posts of, to, and from 
+[[https://bits4waves.wordpress.com/blog][Bits4Waves’ Blog]].
 * Fetch the data from the shortcodes
 :PROPERTIES:
 :BLOG:     bits4waves
