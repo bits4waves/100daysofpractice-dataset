@@ -267,7 +267,7 @@ ifndef IG_USER
 $(error IG_USER is not set)
 endif
 
-PYTHON=../venv/bin/python
+PYTHON=../venv/bin/python    # <-- we'll change this
 SRC=../src
 
 all: shortcodes
@@ -277,7 +277,25 @@ shortcodes:
 
 clean:
 	rm -rf \#100daysofpractice/
+#+END_EXAMPLE
 
+becomes
+
+#+BEGIN_EXAMPLE
+ifndef IG_USER
+$(error IG_USER is not set)
+endif
+
+PYTHON=python
+SRC=../src
+
+all: shortcodes
+
+shortcodes:
+	$(PYTHON) $(SRC)/get-shortcodes.py
+
+clean:
+	rm -rf \#100daysofpractice/
 #+END_EXAMPLE
 
 I’m Eglur, and this is my first authored post here (all the previous ones were also written by me, but this is the first with my name, so I felt it was appropriate to introduce myself).

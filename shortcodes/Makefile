@@ -2,7 +2,7 @@ ifndef IG_USER
 $(error IG_USER is not set)
 endif
 
-PYTHON=../venv/bin/python
+PYTHON=python
 SRC=../src
 
 all: shortcodes
