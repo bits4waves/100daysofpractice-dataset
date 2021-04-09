@@ -17,7 +17,8 @@ shortcodes-orig:
 shortcodes-test: $(SHORTCODES_ORIG)
 	head --lines=10 $(SHORTCODES_ORIG) > $(SHORTCODES_TEST)
 
-shortcodes-sort:
+shortcodes-sort: $(SHORTCODES_ORIG)
+	sort $(SHORTCODES_ORIG) > $(SHORTCODES_SORT)
 
 shortcodes-uniq:
 
