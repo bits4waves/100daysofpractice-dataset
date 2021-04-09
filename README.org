@@ -10,7 +10,7 @@ It was posted by the creator of the hashtag, =@violincase=, the violin virtuosa 
 
 See [[https://github.com/bits4waves/100daysofpractice-dataset/blob/master/shortcodes/Makefile][Makefile]] and the [[https://github.com/bits4waves/100daysofpractice-dataset/blob/master/shortcodes/README.org][README]] for details on how they were obtained.
 
-If you’d like to replicate the process by which they were obtained, you could run this on a terminal:
+You may replicate the process by which they were obtained by running the following commands:
 
 #+BEGIN_EXAMPLE
 git clone git@github.com:bits4waves/100daysofpractice-dataset.git
