@@ -16,7 +16,6 @@ python3 -m venv venv
 source venv/bin/activate
 python -m pip install requests
 python -m pip install -r requirements.txt
-export IG_USER="<Replace with a username for a valid Instagram account>"
 cd shortcodes
 make clean
 make
