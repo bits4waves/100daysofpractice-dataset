@@ -308,7 +308,7 @@ It would also be nice to
 
 Something very important is to update the instructions on how to obtain the several shortcode files.
 - [X] Use Org format for the main README
-- [ ] have the instructions in the main README
+- [X] have the instructions in the main README
 - [ ] add description of the shortcodes
 - [ ] add quick installation instructions
 - [ ] add a usage example

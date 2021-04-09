@@ -1,1 +1,21 @@
 Instagram posts with the hashtag "#100daysofpractice".
+
+The file [[https://github.com/bits4waves/100daysofpractice-dataset/blob/master/shortcodes/shortcodes-uniq.txt][shortcodes-uniq.txt]] contains a list of =shortcodes= of instagram posts that contain the hashtag “#100daysofpractice”.
+See [[https://github.com/bits4waves/100daysofpractice-dataset/blob/master/shortcodes/Makefile][Makefile]] and [[https://github.com/bits4waves/100daysofpractice-dataset/blob/master/shortcodes/README.org][the README file]] for instructions on how they were obtained.
+
+#+BEGIN_EXAMPLE
+git clone git@github.com:bits4waves/100daysofpractice-dataset.git
+cd 100daysofpractice-dataset/
+python3 -m venv venv
+source venv/bin/activate
+python -m pip install --upgrade requests
+python -m pip install --upgrade -r requirements.txt
+export IG_USER="<Replace with a username for a valid Instagram account>"
+export IG_PASSWORD="<Replace with the corresponding password>"
+#+END_EXAMPLE
+
+If you’d like to replicate the process by which they were obtained, you could run this on a terminal:
+
+The command below will fetch a random shortcode from
+the file
+and return the link for the corresponding post:
