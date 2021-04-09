@@ -8,7 +8,7 @@ For instance the first post with the hashtag =#100daysofpractice= has the shortc
 Hence you may access it with the link https://www.instagram.com/p/BTrwiUuh8vV.
 It was posted by the creator of the hashtag, =@violincase=, the violin virtuosa Hilary Hahn.
 
-See [[https://github.com/bits4waves/100daysofpractice-dataset/blob/master/shortcodes/Makefile][Makefile]] and the [[https://github.com/bits4waves/100daysofpractice-dataset/blob/master/shortcodes/README.org][README]] for details on how they were obtained.
+See [[https://github.com/bits4waves/100daysofpractice-dataset/blob/master/shortcodes/Makefile][Makefile]] and the [[https://github.com/bits4waves/100daysofpractice-dataset/blob/master/shortcodes/README.org][README]] for details on how the shortcodes were obtained.
 
 You may replicate the process by which they were obtained by running the following commands:
 
