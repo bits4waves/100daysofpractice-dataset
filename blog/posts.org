@@ -246,13 +246,12 @@ Take care!
 * Let’s Make(file) it more replicable! Part 2
 :PROPERTIES:
 :BLOG:     eglur@bits4waves
-:DATE: [2021-04-08 Thu 17:17]
 :OPTIONS: toc:nil num:nil todo:nil pri:nil tags:nil ^:nil
 :CATEGORY: Blog
 :POST_TAGS: 100daysofpractice, hack, replicability, science
 :ID:       o2b:d0179640-0fe5-4920-9e8f-cf62b6f34af2
-:POST_DATE: [2021-04-08 Thu 18:25]
-:POSTID:   384
+:POST_DATE: [2021-04-09 Fri 16:56]
+:POSTID:   389
 :END:
 
 Hello back!
@@ -309,7 +308,17 @@ It would also be nice to
 Something very important is to update the instructions on how to obtain the several shortcode files.
 - [X] Use Org format for the main README
 - [X] have the instructions in the main README
-- [ ] add description of the shortcodes
-- [ ] add quick installation instructions
-- [ ] add a usage example
-- [ ] set environment variables for Instagram user and password
+- [X] add description of the shortcodes
+- [X] add quick installation instructions
+- [X] add a usage example
+- [X] do not set environment variables for Instagram user and password
+
+Well, that took a while...
+If you want to see the results, they’re (mainly) in the [[https://github.com/bits4waves/100daysofpractice-dataset/blob/master/README.org][project’s main README file]].
+You can also open the hood and look at the [[https://github.com/bits4waves/100daysofpractice-dataset/commits/master][list of commits]] for all that was done!
+
+All I can say is that it was really humbling to test all the changes below in a clean new clone...
+But now I’m pretty sure that anyone can replicate the process, which is great for Science!
+Cheesy, but true LOL!
+
+See ya!
