@@ -32,5 +32,9 @@ with open(SHORTCODE_FILE, "a") as file:
             # repeated.
             next(hashtag_posts)
             # Here we write all shortcodes to the file
+        k = 0
         for post in hashtag_posts:
             print(post.shortcode, file=file)
+            k += 1
+            if k % 500 == 0:
+                print(k)
