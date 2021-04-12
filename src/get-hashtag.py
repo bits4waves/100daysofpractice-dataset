@@ -1,8 +1,9 @@
+import os
 import instaloader
 
 SHORTCODE_FILE = "shortcodes.txt"
 HASHTAG = "100daysofpractice"
-IG_USER = ... # (insert your username)
+IG_USER = os.getenv("IG_USER")
 
 L = instaloader.Instaloader(fatal_status_codes=[400, 429])
 L.load_session_from_file(IG_USER)
