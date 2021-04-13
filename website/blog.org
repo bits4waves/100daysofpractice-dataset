@@ -402,4 +402,8 @@ clean:
 	rm -rf $(SHORTCODES_ORIG) $(SHORTCODES_TEST) $(SHORTCODES_SORT) $(SHORTCODES_UNIQ)
 #+END_EXAMPLE
 
-First, let’s fix a fundamental problem with the =Makefile=: the targets must have the file extension!
+First, let’s fix some issues with =Makefile=:
+- [X] a fundamental problem with the =Makefile=: the targets must have the file extension!
+- [X] fix: typos in targets’ names
+- [X] create a link for the final file at the end
+- [X] add variable for link to final file
