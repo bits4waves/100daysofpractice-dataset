@@ -196,7 +196,13 @@ and
 $(PYTHON) $(SRC)/get-shortcodes.py
 #+END_EXAMPLE
 
-=get-shortcodes.py=ῶis not currently accomodating for the OCD, as it creates the file =shortcodes.txt= instead of =shortcodes-orig.txt=:
+The script
+@@html:<code>@@get-shortcodes.py@@html:</code>@@
+is not currently accomodating for the OCD, as it creates the file
+=shortcodes.txt=
+instead of
+=shortcodes-orig.txt=
+:
 
 #+BEGIN_EXAMPLE
 import instaloader
