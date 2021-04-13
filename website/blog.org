@@ -329,10 +329,27 @@ See ya!
 :OPTIONS: toc:nil num:nil todo:nil pri:nil tags:nil ^:nil
 :CATEGORY: Blog
 :POST_TAGS: 100daysofpractice, hack
+:ID:       b695ef76-e0e1-4198-b8d1-7baedb07b528
 :END:
 
 This expression got fame with Newton in the 1600’s, but it had been used already as early as the 1100’s.
 Here at Bits4Waves we like ideas that linger for 1000 years or so.
 That’s why today’s activity is so gratifying!
 
+We’ve been collecting shortcodes of the posts with the hashtag =#100daysofpractice=.
+There are 600k in total, but we could get only 50k (12 times less!).
 
+The process to obtain them used the Python library =instaloader=, and it was breaking at the 50k mark.
+
+After [[https://github.com/instaloader/instaloader/issues/1077][sharing the issue on =instaloader='s Github]], one of the developers was kind enough to help.
+Applying some advanced wizardry, he cooked a new script using ideas and codes from related opened issues and SHAZAM: we now have 250k shortcodes!
+It breaks at this point, and I communicated the fact.
+Let’s hope it’s solvable!
+
+Meanwhile, we have work to do:
+
+- [ ] update the code with the new script
+- [ ] unify the new shortcodes
+
+About the code, I had created a new branch for the new script, giving the script also a new different name.
+As it worked better than the previous version, it could simply replace that one.
