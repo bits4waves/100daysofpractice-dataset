@@ -141,7 +141,7 @@ Specifically, we’ll create a =Makefile= to generate the shortcodes.
 The =Makefile= needs a =recipe= to obtain each =target=.
 Let’s review [[https://bits4waves.wordpress.com/?p=325][how we got each one of the targets]]:
 
-1. =shortcodes-orig.txt=: [[https://github.com/bits4waves/100daysofpractice-dataset/blob/master/Makefile][used a dedicated =Makefile=]]
+1. =shortcodes-orig.txt=: used a [[https://github.com/bits4waves/100daysofpractice-dataset/blob/master/shortcodes/Makefile][dedicated =Makefile=]]
 2. =shortcodes-sort.txt=: ran commands manually
 3. =shortcodes-uniq.txt=: ran commands manually
 4. =shortcodes-test.txt=: ran commands manually
