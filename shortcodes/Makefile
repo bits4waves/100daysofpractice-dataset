@@ -9,6 +9,7 @@ SHORTCODES_ORIG=shortcodes-orig.txt
 SHORTCODES_TEST=shortcodes-test.txt
 SHORTCODES_SORT=shortcodes-sort.txt
 SHORTCODES_UNIQ=shortcodes-uniq.txt
+SHORTCODES_LINK=shortcodes.txt
 OBJECTS = $(SHORTCODES_ORIG) $(SHORTCODES_TEST) $(SHORTCODES_SORT) $(SHORTCODES_UNIQ)
 
 all: $(OBJECTS)
