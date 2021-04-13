@@ -348,8 +348,23 @@ Let’s hope it’s solvable!
 
 Meanwhile, we have work to do:
 
-- [ ] update the code with the new script
+- [X] update the code with the new script
 - [ ] unify the new shortcodes
 
 About the code, I had created a new branch for the new script, giving the script also a new different name.
 As it worked better than the previous version, it could simply replace that one.
+Let’s do this:
+
+#+BEGIN_SRC shell :session *giant*
+SRC=~/sci/100daysofpractice-dataset/src
+pushd $SRC
+
+git -C $SRC rm get-shortcodes.py
+git -C $SRC mv get-hashtag.py get-shortcodes.py
+#+END_SRC
+
+#+RESULTS:
+: 
+: ~/sci/100daysofpractice-dataset/src ~/sci/100daysofpractice-dataset/src ~/sci/100daysofpractice-dataset ~/sci/100daysofpractice-dataset ~/sci/100daysofpractice-dataset/website
+: rafa@bach:~/sci/100daysofpractice-dataset/src$ rm 'src/get-shortcodes.py'
+
