@@ -453,7 +453,3 @@ OK, that’s done!
 Now let’s =make= it and wait for the results!
 
 See ya!
-
-# ./plate-tuning-sheet.jpg http://bits4waves.files.wordpress.com/2021/04/plate-tuning-sheet-10.jpg
-
-# ./ashoulder.jpg http://bits4waves.files.wordpress.com/2021/04/ashoulder.jpg
