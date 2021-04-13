@@ -4,6 +4,7 @@ endif
 
 PYTHON=python
 SRC=../src
+GET_SHORTCODES_PY=$(SRC)/get-shortcodes.py
 SHORTCODES_ORIG=shortcodes-orig.txt
 SHORTCODES_TEST=shortcodes-test.txt
 SHORTCODES_SORT=shortcodes-sort.txt
@@ -12,7 +13,7 @@ SHORTCODES_UNIQ=shortcodes-uniq.txt
 all: shortcodes-orig shortcodes-test shortcodes-sort shortcodes-uniq
 
 shortcodes-orig:
-	$(PYTHON) $(SRC)/get-shortcodes.py
+	$(PYTHON) $(GET_SHORTCODES_PY)
 
 shortcodes-test: $(SHORTCODES_ORIG)
 	head --lines=10 $(SHORTCODES_ORIG) > $(SHORTCODES_TEST)
