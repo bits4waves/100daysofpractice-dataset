@@ -165,8 +165,8 @@ Please share your thoughts in the comments below!)
 
 #+BEGIN_EXAMPLE
 PROJECT=~/sci/100daysofpractice-dataset
-git mv Makefile shortcodes/
 pushd $PROJECT
+git mv Makefile shortcodes/
 #+END_EXAMPLE
 
 We have to make some accomodations for the new place inside the =Makefile=.
