@@ -196,18 +196,10 @@ and
 $(PYTHON) $(SRC)/get-shortcodes.py
 #+END_EXAMPLE
 
-The script
-@@html:<code>@@get-shortcodes.py@@html:</code>@@
-is not currently accomodating for the OCD, as it creates the file
-=shortcodes.txt=
-instead of
-=shortcodes-orig.txt=
-:
+The script @@html:<code>@@get-shortcodes.py@@html:</code>@@ is not currently accomodating for he OCD, as it creates the file @@html:<code>@@shortcodes.txt@@html:</code>@@ instead of @@html:<code>@@shortcodes-orig.txt@@html:</code>@@:
 
 #+BEGIN_EXAMPLE
-import instaloader
-import time
-import os
+import instaloader import time import os
 
 I = instaloader.Instaloader()
 I.interactive_login(os.getenv('IG_USER'))
