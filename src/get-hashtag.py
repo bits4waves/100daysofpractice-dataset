@@ -1,7 +1,7 @@
 import os
 import instaloader
 
-SHORTCODE_FILE = "shortcodes.txt"
+SHORTCODE_FILE = "shortcodes-orig.txt"
 HASHTAG = "100daysofpractice"
 IG_USER = os.getenv("IG_USER")
 
