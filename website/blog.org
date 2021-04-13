@@ -329,12 +329,12 @@ See ya!
 :OPTIONS: toc:nil num:nil todo:nil pri:nil tags:nil ^:nil
 :CATEGORY: Blog
 :POST_TAGS: 100daysofpractice, hack
-:ID:       b695ef76-e0e1-4198-b8d1-7baedb07b528
-:POST_DATE: [2021-04-13 Tue 14:42]
-:POSTID:   454
+:ID:       o2b:953552e9-7def-4eea-a5d8-2aed5a66f00b
+:POST_DATE: [2021-04-13 Tue 14:54]
+:POSTID:   471
 :END:
 
-This expression got fame with Newton in the 1600’s, but it had been used already as early as the 1100’s.
+This expression got fame with Newton in the 1600’s, but it had been used already as early as the 1100’s[[https://en.wikipedia.org/wiki/Standing_on_the_shoulders_of_giants][¹]].
 Here at Bits4Waves we usually don’t immediately dismiss ideas that linger for 1000 years or so---we try to /learn/ from them, if possible!
 That’s why today’s activity is so gratifying...
 
@@ -356,18 +356,13 @@ About the code, I had created a new branch for the new script, giving the script
 As it worked better than the previous version, it could simply replace that one.
 Let’s do this:
 
-#+BEGIN_SRC shell :session *giant*
+#+BEGIN_EXAMPLE
 SRC=~/sci/100daysofpractice-dataset/src
 pushd $SRC
 
 git -C $SRC rm get-shortcodes.py
 git -C $SRC mv get-hashtag.py get-shortcodes.py
-#+END_SRC
-
-#+RESULTS:
-: 
-: ~/sci/100daysofpractice-dataset/src ~/sci/100daysofpractice-dataset/src ~/sci/100daysofpractice-dataset ~/sci/100daysofpractice-dataset ~/sci/100daysofpractice-dataset/website
-: rafa@bach:~/sci/100daysofpractice-dataset/src$ rm 'src/get-shortcodes.py'
+#+END_EXAMPLE
 
 This takes care of the renaming.
 Now we have to check to see if everything can work well with the new script.
