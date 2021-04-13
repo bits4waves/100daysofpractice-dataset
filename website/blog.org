@@ -324,12 +324,14 @@ Cheesy, but true LOL!
 See ya!
 * On the shoulders of giants
 :PROPERTIES:
-:BLOG: eglur@bits4waves
+:BLOG:     eglur@bits4waves
 :DATE: [2021-04-13 Tue 11:12]
 :OPTIONS: toc:nil num:nil todo:nil pri:nil tags:nil ^:nil
 :CATEGORY: Blog
 :POST_TAGS: 100daysofpractice, hack
 :ID:       b695ef76-e0e1-4198-b8d1-7baedb07b528
+:POST_DATE: [2021-04-13 Tue 14:42]
+:POSTID:   454
 :END:
 
 This expression got fame with Newton in the 1600’s, but it had been used already as early as the 1100’s.
@@ -456,3 +458,7 @@ OK, that’s done!
 Now let’s =make= it and wait for the results!
 
 See ya!
+
+# ./plate-tuning-sheet.jpg http://bits4waves.files.wordpress.com/2021/04/plate-tuning-sheet-10.jpg
+
+# ./ashoulder.jpg http://bits4waves.files.wordpress.com/2021/04/ashoulder.jpg
