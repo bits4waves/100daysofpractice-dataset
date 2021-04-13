@@ -348,7 +348,7 @@ Let’s hope it’s solvable!
 
 Meanwhile, we have work to do:
 
-- [X] update the code with the new script
+- [ ] update the code with the new script
 - [ ] unify the new shortcodes
 
 About the code, I had created a new branch for the new script, giving the script also a new different name.
@@ -368,3 +368,38 @@ git -C $SRC mv get-hashtag.py get-shortcodes.py
 : ~/sci/100daysofpractice-dataset/src ~/sci/100daysofpractice-dataset/src ~/sci/100daysofpractice-dataset ~/sci/100daysofpractice-dataset ~/sci/100daysofpractice-dataset/website
 : rafa@bach:~/sci/100daysofpractice-dataset/src$ rm 'src/get-shortcodes.py'
 
+This takes care of the renaming.
+Now we have to check to see if everything can work well with the new script.
+Let’s start from the beginning: the =Makefile=.
+
+#+BEGIN_EXAMPLE
+ifndef IG_USER
+$(error IG_USER is not set)
+endif
+
+PYTHON=python
+SRC=../src
+SHORTCODES_ORIG=shortcodes-orig.txt
+SHORTCODES_TEST=shortcodes-test.txt
+SHORTCODES_SORT=shortcodes-sort.txt
+SHORTCODES_UNIQ=shortcodes-uniq.txt
+
+all: shortcodes-orig shortcodes-test shortcodes-sort shortcodes-uniq
+
+shortcodes-orig:
+	$(PYTHON) $(SRC)/get-shortcodes.py
+
+shortcodes-test: $(SHORTCODES_ORIG)
+	head --lines=10 $(SHORTCODES_ORIG) > $(SHORTCODES_TEST)
+
+shortcodes-sort: $(SHORTCODES_ORIG)
+	sort $(SHORTCODES_ORIG) > $(SHORTCODES_SORT)
+
+shortcodes-uniq: $(SHORTCODES_SORT)
+	uniq $(SHORTCODES_SORT) > $(SHORTCODES_UNIQ)
+
+clean:
+	rm -rf $(SHORTCODES_ORIG) $(SHORTCODES_TEST) $(SHORTCODES_SORT) $(SHORTCODES_UNIQ)
+#+END_EXAMPLE
+
+First, let’s fix a fundamental problem with the =Makefile=: the targets must have the file extension!
