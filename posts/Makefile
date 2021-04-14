@@ -5,7 +5,7 @@ endif
 PYTHON=python -i
 SRC=../src
 GET_POSTS_PY=$(SRC)/get-posts.py
-POSTS_ORIG=posts-orig.txt
+POSTS_ORIG=posts-orig.json
 OBJECTS = $(POSTS_ORIG)
 
 all: $(OBJECTS)

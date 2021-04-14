@@ -1,7 +1,8 @@
 import os
 import instaloader
+import json
 
-POST_FILE = "posts-orig.txt"
+POST_FILE = "posts-orig.json"
 HASHTAG = "100daysofpractice"
 IG_USER = os.getenv("IG_USER")
 
@@ -33,4 +34,6 @@ with open(POST_FILE, "a") as file:
             next(hashtag_posts)
             # Here we write all shortcodes to the file
         for post in hashtag_posts:
-            print(vars(post), file=file)
+            postdict = vars(post)
+            del postdict['_context'] # json can't process this key (and we don't need it)
+            print(json.dumps(postdict), file=file)
