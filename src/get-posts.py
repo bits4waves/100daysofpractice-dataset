@@ -1,7 +1,7 @@
 import os
 import instaloader
 
-SHORTCODE_FILE = "shortcodes-orig.txt"
+POST_FILE = "posts-orig.txt"
 HASHTAG = "100daysofpractice"
 IG_USER = os.getenv("IG_USER")
 
@@ -18,7 +18,7 @@ hashtag_posts = instaloader.NodeIterator(
     query_referer=f"https://www.instagram.com/explore/tags/{HASHTAG}/",
 )
 
-with open(SHORTCODE_FILE, "a") as file:
+with open(POST_FILE, "a") as file:
     with instaloader.resumable_iteration(
             context=L.context,
             iterator=hashtag_posts,
@@ -33,4 +33,4 @@ with open(SHORTCODE_FILE, "a") as file:
             next(hashtag_posts)
             # Here we write all shortcodes to the file
         for post in hashtag_posts:
-            print(post.shortcode, file=file)
+            print(vars(post), file=file)
