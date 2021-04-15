@@ -1,0 +1,5 @@
+remove intermediate shortcode files
+
+#+BEGIN_SRC shell
+
+#+END_SRC
