@@ -1,0 +1,80 @@
+#+PROPERTY: header-args:shell :session mysession :results output pp
+
+Let’s get easy acces to the main file with the posts and the adendum file with the posts fetched after breaking and resuming:
+
+#+BEGIN_SRC shell
+PROJ_FOLDER=~/sci/100daysofpractice-dataset
+
+MAIN_FOLDER=${PROJ_FOLDER}/posts
+ADENDUM_FOLDER=${PROJ_FOLDER}/src
+
+POSTS_FILENAME=posts-orig.json
+
+MAIN_FILE=${MAIN_FOLDER}/${POSTS_FILENAME}
+ADENDUM_FILE=${ADENDUM_FOLDER}/${POSTS_FILENAME}
+
+echo
+echo $ADENDUM_FILE
+echo $MAIN_FILE
+#+END_SRC
+
+#+RESULTS:
+: 
+: /home/rafa/sci/100daysofpractice-dataset/src/posts-orig.json
+: /home/rafa/sci/100daysofpractice-dataset/posts/posts-orig.json
+
+
+Now let’s get the number of lines in each file:
+
+#+BEGIN_SRC shell
+wc -l $MAIN_FILE
+wc -l $ADENDUM_FILE
+#+END_SRC
+
+#+RESULTS:
+: 382708 /home/rafa/sci/100daysofpractice-dataset/posts/posts-orig.json
+: 67143 /home/rafa/sci/100daysofpractice-dataset/src/posts-orig.json
+
+Let’s concatenate the files:
+
+#+BEGIN_SRC shell
+cat $ADENDUM_FILE >> $MAIN_FILE
+#+END_SRC
+
+#+RESULTS:
+
+After concatenating, we expect the main file to have 449,851 lines.
+Let’s check:
+
+#+BEGIN_SRC shell
+wc -l $MAIN_FILE
+#+END_SRC
+
+#+RESULTS:
+: 449851 /home/rafa/sci/100daysofpractice-dataset/posts/posts-orig.json
+
+OK!
+
+Let’s remove the adendum file:
+
+#+BEGIN_SRC shell
+git -C $ADENDUM_FOLDER rm $ADENDUM_FILE
+#+END_SRC
+
+#+RESULTS:
+: 
+: rafa@bach:~/sci/100daysofpractice-dataset/src$ rm 'src/posts-orig.json'
+
+Now remove =instaloader= resume files:
+
+#+BEGIN_SRC shell
+GIT_MAIN_FOLDER="git -C $MAIN_FOLDER"
+
+$GIT_MAIN_FOLDER rm resume_info_dsk7_D2b.json.xz
+$GIT_MAIN_FOLDER rm resume_info_dsk7_D2b.json.xz_copy
+#+END_SRC
+
+#+RESULTS:
+: 
+: rafa@bach:~/sci/100daysofpractice-dataset/src$ rm 'posts/resume_info_dsk7_D2b.json.xz'
+: rm 'posts/resume_info_dsk7_D2b.json.xz_copy'
