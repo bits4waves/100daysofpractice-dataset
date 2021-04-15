@@ -453,3 +453,111 @@ OK, that’s done!
 Now let’s =make= it and wait for the results!
 
 See ya!
+* #100daysofpractice: 450k shortcodes (and post data!)
+:PROPERTIES:
+:BLOG:     eglur@bits4waves
+:DATE: [2021-04-15 Thu 11:18]
+:OPTIONS: toc:nil num:nil todo:nil pri:nil tags:nil ^:nil
+:CATEGORY: Dataset
+:POST_TAGS: hack,100daysofpractice
+:ID:       o2b:6a10008d-6b46-40ab-86c1-3a693d4f84bc
+:POST_DATE: [2021-04-15 Thu 11:23]
+:POSTID:   479
+:END:
+
+Hello!
+
+After a slight change in the strategy used to obtain the shortcodes, I was able to fetch /way/ more data from the post, including
+- user who posted it
+- date when it was posted
+- number of likes, and
+- hashtags (completes post caption),
+among others.
+This data will have to be anonymized before it is released, so some information (like the user who posted it) will have to be processed (e.g., replace each actual username for a randomly generated unique code).
+
+But before that, there’s some housekeeping to do.
+This time I could get the “resuming” function of the script working.
+But it was somewhat confusing.
+
+It all began when I saw that the code got the shortcodes with =post.shortcode=.
+I wondered: what else could be there---without having to make a new request to Instagram (and possibly get a time out)?
+Then I found out that Python’s function =vars= could give all the data currently in =post=.
+Executing =postdict = vars(post)= put all this data in the /dictionary/ =postdict=.
+
+I then needed a way to save it to a file in a convenient format---like JSON.
+Running =json.dumps(postdict)= gave a JSON string extracted from the post’s dictionary.
+The /key/ =_context= from =postdict= had to be removed because =json= couldn’t parse it.
+It contains the string representation for the instance of the =post=.
+This is internal Python code data, and not data about the post, so it can be safely ignored.
+
+In the end, the change was from this line:
+
+#+BEGIN_EXAMPLE
+print(post.shortcode, file=file)
+#+END_EXAMPLE
+
+to these ones:
+
+#+BEGIN_EXAMPLE
+postdict = vars(post)
+del postdict['_context'] # json can't process this key (and we don't need it)
+print(json.dumps(postdict), file=file)
+#+END_EXAMPLE
+
+These changes felt like deserving a new script, so ==100daysofpractice-dataset/src/get-posts.py= was created, along with =100daysofpractice-dataset/posts/Makefile= (new folder too!).
+
+I started the process using =100daysofpractice-dataset/posts/Makefile=.
+It broke (Error 400) after successfully fetching 300k out of 600k posts.
+In the past, I wasn’t able to resume the process---meaning restart it and fetch from the 300,001 post onwards.
+But this time I wanted to gave it a try.
+
+To be able to follow the whole process, I ran the script using the debugger =pdb= inside Emacs.
+From inside =100daysofpractice-dataset/src/= I ran =M-x pdb= then =../venv/bin/python -m pdb get-posts.py=.
+
+As I had ran it before using the makefile in =100daysofpractice-dataset/posts/Makefile=, the file containing the resume data was there.
+This time I would ran the debugger from inside another folder, =100daysofpractice-dataset/src/=, so I copied the resume file there.
+
+At first run, it didn’t resume from where it broke.
+Restarting and following the steps, I could see that it was looking for a resume file with a different name from the one I copied there.
+The difference was in the “magic” part of the filename, that was obtained from the code:
+
+#+BEGIN_EXAMPLE
+format_path=lambda magic: f"resume_info_{magic}.json.xz",
+#+END_EXAMPLE
+
+The actual resume file had the name =resume_info_dsk7_D2b.json.xz=: its “magical” part was =dsk7_D2b=.
+The program expected the magical part =jQQhVmW0=.
+I renamed the resume file to =resume_info_jQQhVmW0.json.xz=, so it would contain the expected magical part.
+Then the program accepted it and started the resuming routine.
+
+The program, when not resuming, accesses the shortcodes roughly by date in descending order.
+This usually means that the first posts it accesses are from the current day.
+
+For a quick check, I looked at the first post that the resuming routing accessed, and it was from the same day as the last one that it accessed before breaking.
+This suggested that it was indeed resuming the process, and not starting it from beginning.
+
+After downloading 60k posts, the program ended with the following output:
+
+#+BEGIN_EXAMPLE
+Iteration complete, deleted resume information file resume_info_jQQhVmW0.json.xz.
+#+END_EXAMPLE
+
+“Iteration complete”: as it was /iterating/ through the /iterator/ containing the posts, this suggested that it had processed /all/ the posts with the hashtag =#100daysofpractice=.
+But if you had been looking at the numbers, maybe you got the same feeling: it doesn’t /add up/!
+
+I just went to the Instagram website and inserting “#100daysofpractice” in the search bar. Instagram then says that there are 614,795 posts with the hashtag =#100daysofpractice=.
+The program downloaded 449,851 posts.
+The difference is 164,944.
+Maybe Instagram only counts the hashtags at the time of posting, not editing and removing a hashtag or deleting a post?
+I asked the developers if they know anything about it.
+
+Meanwhile, I want to /explore/ the data.
+First thing I want to know is how it /spreads/ over time.
+This may shed some light and maybe help clarify if the possibly missing 160k posts are due to problems in the download process.
+
+I expect to see a smooth spreading over time.
+If there are some “gaps” in certain periods, this could suggest that the program skipped those periods and didn’t download those posts.
+
+But this will be on a post of its own!
+
+See ya!
