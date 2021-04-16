@@ -1,0 +1,3 @@
+* add new shortcodes
+The current file is =shortcodes-uniq.txt=.
+Let’s just give it a better name.
