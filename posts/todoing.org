@@ -6,3 +6,5 @@ add a csv with the posts’ dat
 Only ‘_node’ has meaningful data.
 * add posts: json > dict > csv
 - [X] create Python script
+* posts: create csv from json
+* delete helper files
