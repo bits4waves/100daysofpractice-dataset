@@ -2,11 +2,18 @@ import json
 import csv
 import re
 
+def bool_to_int(b):
+    if b:
+        return 1
+    else:
+        return 0
+
 def get_video_count(d):
     if d['is_video']:
         return d['video_view_count']
     else:
         return 0
+
 
 JSON_FILE = 'posts-test.json'
 CSV_FILE = 'posts-test.csv'
