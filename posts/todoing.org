@@ -4,3 +4,4 @@ add a csv with the posts’ dat
 - [X] test data
 
 Only ‘_node’ has meaningful data.
+* add posts: json > dict > csv
