@@ -2,6 +2,12 @@ import json
 import csv
 import re
 
+def get_video_count(d):
+    if d['is_video']:
+        return d['video_view_count']
+    else:
+        return 0
+
 JSON_FILE = 'posts-test.json'
 CSV_FILE = 'posts-test.csv'
 with open(JSON_FILE, 'r', newline='') as json_file, open(CSV_FILE, 'w', newline='') as csv_file:
