@@ -15,8 +15,8 @@ def get_video_count(d):
         return 0
 
 
-JSON_FILE = 'posts-test.json'
-CSV_FILE = 'posts-test.csv'
+JSON_FILE = 'posts.json'
+CSV_FILE = 'posts.csv'
 with open(JSON_FILE, 'r', newline='') as json_file, open(CSV_FILE, 'w', newline='') as csv_file:
     at_firstline = True
     for line in json_file:
