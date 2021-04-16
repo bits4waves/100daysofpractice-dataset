@@ -39,4 +39,16 @@ didn’t work
 
 >>> Ignore captions and focus on the work at hand: anonymous file won’t need captions.
 
+* check the results
+#+BEGIN_SRC shell
+wc -l posts.json
+wc -l posts.csv
+#+END_SRC
+
+#+RESULTS:
+: 449851 posts.json
+: 449852 posts.csv
+
+The extra line in the CSV is the header line, so that’s all right!
+
 * delete helper files
