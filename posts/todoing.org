@@ -1,1 +1,6 @@
+add a csv with the posts’ dat
+* DONE test if any key besides ‘_node’ has meaningful data
+- [X] add test-fields.py
+- [X] test data
 
+Only ‘_node’ has meaningful data.
