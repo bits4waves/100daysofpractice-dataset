@@ -1,6 +1,6 @@
 Links for Instagram posts with the hashtag =#100daysofpractice=.
 
-Specifically, the file [[https://github.com/bits4waves/100daysofpractice-dataset/blob/master/shortcodes/shortcodes-uniq.txt][shortcodes-uniq.txt]] contains a list of 450,092 /shortcodes/ of instagram posts with the hashtag =#100daysofpractice=.
+Specifically, the file [[https://github.com/bits4waves/100daysofpractice-dataset/blob/master/shortcodes/shortcodes.txt][shortcodes.txt]] contains a list of 450,092 /shortcodes/ of instagram posts with the hashtag =#100daysofpractice=.
 
 To access the post given a shortcode, just paste the shortcode after =https://www.instagram.com/p/=.
 
