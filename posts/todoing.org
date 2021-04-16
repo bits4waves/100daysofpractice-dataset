@@ -1,0 +1,30 @@
+After extracting the shortcodes from the [[file:posts/posts-orig.json][posts file]], the file [[file:posts/shortcodes.txt]] was generated.
+
+In terms of number of lines:
+
+#+BEGIN_SRC shell
+pwd
+wc -l posts-orig.json
+wc -l shortcodes.txt
+#+END_SRC
+
+#+RESULTS:
+: /home/rafa/sci/100daysofpractice-dataset/posts
+: 449851 posts-orig.json
+: 449851 shortcodes.txt
+
+OK!
+
+I’ll just move the shortcodes to a safe place:
+
+#+BEGIN_SRC shell
+cp shortcodes.txt ~/
+ls -lh ~/ | grep shortcodes.txt
+wc -l ~/shortcodes.txt
+#+END_SRC
+
+#+RESULTS:
+: -rw-r--r--  1 rafa rafa 5.2M Apr 15 22:43 shortcodes.txt
+: 449851 /home/rafa/shortcodes.txt
+
+Cool.
