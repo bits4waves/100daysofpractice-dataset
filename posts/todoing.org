@@ -4,7 +4,39 @@ add a csv with the posts’ dat
 - [X] test data
 
 Only ‘_node’ has meaningful data.
-* add posts: json > dict > csv
+* DONE add posts: json > dict > csv
 - [X] create Python script
-* posts: create csv from json
+* DONE posts: create csv from json
+* check csv
+How many lines?
+
+#+BEGIN_SRC shell
+wc -l posts.json
+wc -l posts.csv
+#+END_SRC
+
+#+RESULTS:
+: 449851 posts.json
+: 450432 posts.csv
+
+Problem: post captions are generating newline characters.
+
+- [X] open file with =newline=''=
+
+#+BEGIN_SRC shell
+wc -l posts.json
+wc -l posts.csv
+#+END_SRC
+
+#+RESULTS:
+: 449851 posts.json
+: 450432 posts.csv
+
+Still breaking lines.
+
+- [-] encode to utf8
+didn’t work
+
+>>> Ignore captions and focus on the work at hand: anonymous file won’t need captions.
+
 * delete helper files
