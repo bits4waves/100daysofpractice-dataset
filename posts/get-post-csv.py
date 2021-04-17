@@ -32,7 +32,6 @@ with open(JSON_FILE, 'r', newline='') as json_file, open(CSV_FILE, 'w', newline=
         csv_dict['video_view_count'] = get_video_count(json_dict)
         csv_dict['comments_disabled'] = bool_to_int(json_dict['comments_disabled'])
         csv_dict['__typename'] = json_dict['__typename']
-        csv_dict['comments_disabled'] = json_dict['comments_disabled']
         csv_writer = csv.DictWriter(csv_file, csv_dict.keys())
 
         if at_firstline:
