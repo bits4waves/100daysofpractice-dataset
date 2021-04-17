@@ -26,11 +26,11 @@ with open(JSON_FILE, 'r', newline='') as json_file, open(CSV_FILE, 'w', newline=
         csv_dict['shortcode'] = json_dict['shortcode']
         csv_dict['taken_at_timestamp'] = json_dict['taken_at_timestamp']
         csv_dict['owner-id'] = json_dict['owner']['id']
-        csv_dict['is_video'] = json_dict['is_video']
+        csv_dict['is_video'] = bool_to_int(json_dict['is_video'])
         csv_dict['edge_liked_by-count'] = json_dict['edge_liked_by']['count']
         csv_dict['edge_media_to_comment-count'] = json_dict['edge_media_to_comment']['count']
         csv_dict['video_view_count'] = get_video_count(json_dict)
-        csv_dict['comments_disabled'] = json_dict['comments_disabled']
+        csv_dict['comments_disabled'] = bool_to_int(json_dict['comments_disabled'])
         csv_dict['__typename'] = json_dict['__typename']
         csv_dict['comments_disabled'] = json_dict['comments_disabled']
         csv_writer = csv.DictWriter(csv_file, csv_dict.keys())
