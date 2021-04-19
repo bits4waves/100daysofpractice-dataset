@@ -6,3 +6,5 @@
 #+TAGS: 
 #+DESCRIPTION:
 #+TITLE: Hypotheses
+
+* “Good” sounds share basic quantifiable characteristics
