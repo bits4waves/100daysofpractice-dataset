@@ -73,4 +73,3 @@ Partials -> Upper_Partials [arrowhead=none]
 [[file:img/sound-digraph.png]]
 
 #+HTML: <img src="https://bits4waves.files.wordpress.com/2021/04/sound-digraph.png"></img>
-
