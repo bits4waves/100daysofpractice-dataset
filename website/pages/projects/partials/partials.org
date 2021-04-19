@@ -7,7 +7,7 @@
 #+DESCRIPTION:
 #+TITLE: Project Partials
 
-#+BEGIN_SRC dot :file sound-digraph.png :exports none
+#+BEGIN_SRC dot :file img/sound-digraph.png :exports none
 digraph "sound" {
 Tone [label="Musical Tone" arrowhead=none]
 Resonance [style=filled fillcolor="#e4e4e4"]
@@ -70,7 +70,7 @@ Partials -> Upper_Partials [arrowhead=none]
 #+END_SRC
 
 #+RESULTS:
-[[file:sound-digraph.png]]
+[[file:img/sound-digraph.png]]
 
 #+HTML: <img src="https://bits4waves.files.wordpress.com/2021/04/sound-digraph.png"></img>
 
