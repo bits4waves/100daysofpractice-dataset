@@ -1,0 +1,64 @@
+#+BEGIN_SRC dot :file sound-digraph.png
+digraph "sound" {
+Tone [label="Musical Tone" arrowhead=none]
+Resonance [style=filled fillcolor="#e4e4e4"]
+Harmonicity [style=filled fillcolor="#e4e4e4"]
+Intonation [style=filled fillcolor="#e4e4e4"]
+Partials [style=filled fillcolor="#a8a8a8"]
+
+subgraph cluster_partials {
+    graph[style=dotted]
+
+    subgraph cluster_upper_partials {
+        graph[style=dotted]
+        label="Overtones"
+        labeljust="r"
+
+        Upper_Partials [label="Upper Partials"]
+        Next_Harmonics [label="2nd Harmonic,\n3rd Harmonic,\netc."]
+    }
+
+    subgraph cluster_fundamental {
+        graph[style=dotted]
+        label="Pitch"
+        labeljust="l"
+
+        Fundamental
+        First_Harmonic [label="1st Harmonic"]
+    }
+
+    Fundamental -> First_Harmonic [arrowhead=none color="black:invis:black"]
+    Upper_Partials -> Next_Harmonics [arrowhead=none color="black:invis:black"]
+
+    Harmonics [style=filled fillcolor="#a8a8a8"]
+
+    First_Harmonic -> Harmonics [arrowhead=none]
+    Next_Harmonics -> Harmonics [arrowhead=none]
+}
+
+Sound -> Periodic [arrowhead=none]
+Sound -> Aperiodic [arrowhead=none]
+
+Aperiodic -> Noise [arrowhead=none]
+Periodic -> Tone [arrowhead=none]
+
+Tone -> Intensity [arrowhead=none]
+Tone -> Pitch [arrowhead=none]
+Tone -> Quality [arrowhead=none]
+
+Intensity -> Resonance [arrowhead=none]
+Pitch -> Harmonicity [arrowhead=none]
+Pitch -> Intonation [arrowhead=none]
+
+Resonance -> Partials [arrowhead=none]
+Harmonicity -> Partials [arrowhead=none]
+Intonation -> Partials [arrowhead=none]
+Quality -> Partials [arrowhead=none style=dotted]
+
+Partials -> Fundamental [arrowhead=none]
+Partials -> Upper_Partials [arrowhead=none]
+}
+#+END_SRC
+
+#+RESULTS:
+[[file:sound-digraph.png]]
