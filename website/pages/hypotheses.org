@@ -8,3 +8,4 @@
 #+TITLE: Hypotheses
 
 * “Good” sounds share basic quantifiable characteristics
+Project: [[http://bits4waves.wordpress.com/?p=499][Partials]]
