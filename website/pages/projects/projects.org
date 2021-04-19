@@ -7,4 +7,4 @@
 #+DESCRIPTION:
 #+TITLE: Projects
 
-* [[http://bits4waves.wordpress.com/?p=508][Partials]]
+* [[http://bits4waves.wordpress.com/?p=499][Partials]]
