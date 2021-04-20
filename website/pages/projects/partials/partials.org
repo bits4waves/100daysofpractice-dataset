@@ -72,3 +72,53 @@ Partials -> Upper_Partials [arrowhead=none]
 [[file:img/sound-digraph.png]]
 
 #+HTML: <img src="https://bits4waves.files.wordpress.com/2021/04/sound-digraph-1.png" alt="Digraph depicting the central role of the partials in the sound structure."></img>
+
+This project investigates ways to measure the quality of a musical tone using basic structural components.
+
+Helmholtz (1) proposed a basic sound taxonomy for the sound comprised by
+- /intensity/,
+- /pitch/, and
+- /quality/.
+
+The basic structural COMPONENTS chosen for this project were derived from this taxonomy:
+- /resonance/, related to intensity;
+- /intonation/, related to pitch;
+- /harmonicity/, related to quality.
+
+This is depicted in the figure above.
+
+The action plan for this project has the following steps:
+
+1. produce software capable of measuring the COMPONENTS given a musical tone;
+2. obtain musical tone samples of different quality levels;
+3. measure the COMPONENTS of step 2 using the software from step 1;
+4. analyze the correlation between the COMPONENTS and the quality levels.
+
+The strategies for each step are:
+
+1. produce the software /in-house/, placing it in [[https://creativecommons.org/share-your-work/public-domain/cc0/][public domain (CC0)]] ([[http://bits4waves.wordpress.com/?p=5][Softwares]]);
+2. extract the sound from practice videos of musicians with different proficiency levels ([[https://github.com/bits4waves/100daysofpractice-dataset][#100daysofpractice-dataset]]).
+
+Steps 3 and 4 are self-explanatory.
+
+For more details about the inspiration for this project, please continue reading.
+
+In his seminal book, /On the Sensations of Tone/ (1), Helmholtz proposed the characterization of a musical tone by
+- intensity,
+- pitch, and
+- quality.
+This is depicted in the figure above.
+
+These three components may be relativelly well described in terms of their partials:
+- the intensity of the sound being the sum of the individual intensities of the partials, and
+- the pitch being a function of the frequency of the fundamental and corresponding upper partials,
+- the quality encompassing other carachteristics besides intensity and pitch, e.g., deviations or conformities relative to expected individual characteristics of the partials.
+
+Additionally,
+- /resonance/ may increase the intensities of the partials, thus increasing the overall sound intensity
+- /intonation/ determines the frequency of the fundamental, hence the pitch itself
+- /harmonicity/ reflects how close the frequency of each upper partial is to the corresponding “ideal” one (the one that maximizes /consonance/).
+
+*References*
+
+1. H. L. F. Helmholtz. /On the Sensations of Tone as a Physiological Basis for the Theory of Music/. London, 1895.
