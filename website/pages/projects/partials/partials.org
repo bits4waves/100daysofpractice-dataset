@@ -80,13 +80,15 @@ Helmholtz (1) proposed a basic sound taxonomy for the sound comprised by
 - /pitch/, and
 - /quality/.
 
+This is depicted in the figure above.
+
 The basic structural COMPONENTS chosen for this project were derived from this taxonomy:
 
 - /resonance/, related to intensity;
 - /intonation/, related to pitch;
 - /harmonicity/, related to quality.
 
-This is depicted in the figure above.
+The COMPONENTS are filled with light grey in the picture above.
 
 The action plan for this project has the following steps:
 
