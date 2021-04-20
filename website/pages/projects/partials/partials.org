@@ -56,13 +56,12 @@ Tone -> Pitch [arrowhead=none]
 Tone -> Quality [arrowhead=none]
 
 Intensity -> Resonance [arrowhead=none]
-Pitch -> Harmonicity [arrowhead=none]
 Pitch -> Intonation [arrowhead=none]
+Quality -> Harmonicity [arrowhead=none]
 
 Resonance -> Partials [arrowhead=none]
 Harmonicity -> Partials [arrowhead=none]
 Intonation -> Partials [arrowhead=none]
-Quality -> Partials [arrowhead=none style=dotted]
 
 Partials -> Fundamental [arrowhead=none]
 Partials -> Upper_Partials [arrowhead=none]
@@ -72,4 +71,4 @@ Partials -> Upper_Partials [arrowhead=none]
 #+RESULTS:
 [[file:img/sound-digraph.png]]
 
-#+HTML: <img src="https://bits4waves.files.wordpress.com/2021/04/sound-digraph.png" alt="Digraph depicting the central role of the partials in the sound structure."></img>
+#+HTML: <img src="https://bits4waves.files.wordpress.com/2021/04/sound-digraph-1.png" alt="Digraph depicting the central role of the partials in the sound structure."></img>
