@@ -7,5 +7,10 @@
 #+DESCRIPTION:
 #+TITLE: Hypotheses
 
+#+BEGIN_QUOTE
+[...] the truth will set you free.
+---John 8:32
+#+END_QUOTE
+
 * “Good” sounds share basic quantifiable characteristics
 *** Project: [[http://bits4waves.wordpress.com/?p=499][Partials]]
