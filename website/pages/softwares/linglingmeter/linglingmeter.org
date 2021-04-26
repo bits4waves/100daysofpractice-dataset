@@ -6,3 +6,24 @@
 #+TAGS: 
 #+DESCRIPTION:
 #+TITLE: Ling Ling Meter
+
+This program outputs the
+
+- intonation,
+- harmonicity, and
+- resonance
+
+in a sound sample (e.g., a musical tone).
+
+This is done by following these steps:
+
+1. estimate the fundamental of the sound sample, obtain its intensity, and difference from the expected corresponding frequency (A440 as reference);
+2. calculate the expected ideal frequencies for the corresponding upper partials---integer multiples of the fundamental estimated in step (1);
+3. analyze the power spectrum of the sound sample, and, for each ideal frequency calculated in (2), find the peak that is closest to that frequency;
+4. for each peak found in (3), obtain its actual frequency, the difference between the actual and ideal frequencies, and corresponding intensity.
+
+The program then outputs:
+
+- intonation as a function of the difference found in step (1);
+- harmonicity as a function of the differences found in step (4);
+- resonance as a function of the intensities found in step (4).
