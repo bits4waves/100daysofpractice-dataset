@@ -7,4 +7,5 @@
 #+DESCRIPTION:
 #+TITLE: Projects
 
-* [[http://bits4waves.wordpress.com/?p=499][Partials]]---measure the quality of a musical tone using basic structural components
+* [[http://bits4waves.wordpress.com/?p=499][Partials]]
+** Measure the quality of a musical tone using basic structural components
