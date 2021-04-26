@@ -1,1 +1,17 @@
 #+HTML: <img src="https://bits4waves.files.wordpress.com/2021/04/plate-tuning-sheet-8.jpg" alt="Datasheet showing fields for modal frequencies input and resulting diagrams showing carving site recommendations."></img>
+
+For the instrument maker, the plate tuning process may get very tedious because of the difficulties at each step to know exactly where to carve so as to obtain the desired impact on the final frequency.
+
+Alan Carruth published a paper proposing a diagram with the impacts that carving might have on several different sites on the plate (1).
+
+This information was compiled in a [[https://docs.google.com/spreadsheets/d/1flQmmzBa5rORl6uWclfxSgB1eQOwRGLfKLvUKZurYr0/copy][spreadsheet]], where the user informs the  desired final frequencies for the plates, along with the current ones.
+
+The spreadsheet then recommends the best sites to carve the plates to obtain the informed desired frequencies.
+
+After each new cycle of carving, the user may update the current frequencies, and it will update the recommendations based on the informed current frequencies.
+
+The spreadsheet may be accessed [[https://docs.google.com/spreadsheets/d/1flQmmzBa5rORl6uWclfxSgB1eQOwRGLfKLvUKZurYr0/copy][here]].
+
+*References*
+
+1. Alan Carruth. (1991--1993). Free Plate Tuning, Part Two: Violins. In: /Guild of American Luthiers, The Big Red Book of American Lutherie/, pp. 42--52.
