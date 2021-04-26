@@ -21,20 +21,16 @@ After each new cycle of carving, the user may update the current frequencies, an
 
 The spreadsheet may be accessed [[https://docs.google.com/spreadsheets/d/1flQmmzBa5rORl6uWclfxSgB1eQOwRGLfKLvUKZurYr0/copy][here]].
 
-#+HTML: <p xmlns:dct="http://purl.org/dc/terms/">
-#+HTML:   <a rel="license"
-#+HTML:      href="http://creativecommons.org/publicdomain/zero/1.0/">
-#+HTML:     <img src="http://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0" />
-#+HTML:   </a>
-#+HTML:   <br />
-#+HTML:   To the extent possible under law,
-#+HTML:   <a rel="dct:publisher"
-#+HTML:      href="https://www.bits4waves.com">
-#+HTML:     <span property="dct:title">Bits4Waves</span></a>
-#+HTML:   has waived all copyright and related or neighboring rights to
-#+HTML:   <span property="dct:title">Plate Tuning</span>.
-#+HTML: </p>
-
 *References*
 
 1. Alan Carruth. (1991--1993). Free Plate Tuning, Part Two: Violins. In: /Guild of American Luthiers, The Big Red Book of American Lutherie/, pp. 42--52.
+
+#+BEGIN_EXPORT html
+<p xmlns:dct="http://purl.org/dc/terms/">
+  <a rel="license"
+     href="http://creativecommons.org/publicdomain/zero/1.0/">
+    <img src="http://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0" />
+  </a>
+ To the extent possible under law, <a rel="dct:publisher" href="https://www.bits4waves.com"> <span property="dct:title">Bits4Waves</span></a> has waived all copyright and related or neighboring rights to <span property="dct:title">Plate Tuning</span>.
+</p>
+#+END_EXPORT
