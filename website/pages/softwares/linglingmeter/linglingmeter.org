@@ -27,3 +27,13 @@ The program then outputs:
 - intonation as a function of the difference found in step (1);
 - harmonicity as a function of the differences found in step (4);
 - resonance as a function of the intensities found in step (4).
+
+#+BEGIN_EXPORT html
+<p xmlns:dct="http://purl.org/dc/terms/">
+  <a rel="license"
+     href="http://creativecommons.org/publicdomain/zero/1.0/">
+    <img src="http://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0" />
+  </a>
+ To the extent possible under law, <a rel="dct:publisher" href="https://www.bits4waves.com"> <span property="dct:title">Bits4Waves</span></a> has waived all copyright and related or neighboring rights to <span property="dct:title">Ling Ling Meter</span>.
+</p>
+#+END_EXPORT
