@@ -1,3 +1,12 @@
+#+POSTID: 586
+#+DATE: [2021-04-26 Mon 14:39]
+#+ORG2BLOG:
+#+OPTIONS: toc:nil num:nil todo:nil pri:nil tags:nil ^:nil
+#+CATEGORY: 
+#+TAGS: 
+#+DESCRIPTION:
+#+TITLE: Plate Tuning
+
 #+HTML: <img src="https://bits4waves.files.wordpress.com/2021/04/plate-tuning-sheet-8.jpg" alt="Datasheet showing fields for modal frequencies input and resulting diagrams showing carving site recommendations."></img>
 
 For the instrument maker, the plate tuning process may get very tedious because of the difficulties at each step to know exactly where to carve so as to obtain the desired impact on the final frequency.
