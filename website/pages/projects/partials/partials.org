@@ -99,7 +99,7 @@ The action plan for this project has the following steps:
 
 The strategies for each step are:
 
-1. produce the software /in-house/, placing it in [[https://creativecommons.org/share-your-work/public-domain/cc0/][public domain (CC0)]] ([[http://bits4waves.wordpress.com/?p=5][Softwares]]);
+1. produce the software /in-house/, placing it in [[https://creativecommons.org/share-your-work/public-domain/cc0/][public domain (CC0)]] ([[http://bits4waves.wordpress.com/?p=582][Ling Ling Meter]]);
 2. extract the sound from practice videos of musicians with different proficiency levels ([[https://github.com/bits4waves/100daysofpractice-dataset][#100daysofpractice-dataset]]).
 
 Steps 3 and 4 are self-explanatory.
