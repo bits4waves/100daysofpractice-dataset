@@ -7,7 +7,7 @@
 #+DESCRIPTION:
 #+TITLE: Ling Ling Meter
 
-This program outputs the
+This program measures the
 
 - intonation,
 - harmonicity, and
