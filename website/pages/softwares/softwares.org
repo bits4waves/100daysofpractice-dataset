@@ -8,6 +8,6 @@
 #+TITLE: Softwares
 
 * [[http://bits4waves.wordpress.com/?p=582][Ling Ling Meter]]
-** Quality of a sound sample as a function of intonation, harmonicity, and resonance.
+*** Quality of a sound sample as a function of intonation, harmonicity, and resonance.
 * [[http://bits4waves.wordpress.com/?p=586][Plate Tuning]]
-** Modal frequency-based violin plate carving site recommendations.
+*** Modal frequency-based violin plate carving site recommendations.
