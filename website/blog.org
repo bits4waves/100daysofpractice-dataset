@@ -562,3 +562,12 @@ But this will be on a post of its own!
 
 See ya!
 * Anonymize data for research: Instagram posts
+:PROPERTIES:
+:BLOG:     eglur@bits4waves
+:OPTIONS: toc:nil num:nil todo:nil pri:nil tags:nil ^:nil
+:CATEGORY: 
+:POST_TAGS: 
+:ID:       o2b:f61c5af2-3c4f-4b1d-9cd1-d1bcae57a205
+:POST_DATE: [2021-04-27 Tue 12:26]
+:POSTID:   635
+:END:
