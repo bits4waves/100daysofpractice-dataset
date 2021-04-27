@@ -31,7 +31,7 @@ def get_csv_dict(json_dict):
 def anonymize(data):
     return data
 
-def write_to_csv(csv_file, csv_dict, at_firstline=False,
+def write_to_csv(csv_file, csv_dict, at_first_line=False,
                  delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL):
     csv_writer = csv.DictWriter(csv_file,
                                 csv_dict.keys(),
@@ -39,7 +39,7 @@ def write_to_csv(csv_file, csv_dict, at_firstline=False,
                                 quotechar=quotechar,
                                 quoting=quoting)
 
-    if at_firstline: csv_writer.writeheader()
+    if at_first_line: csv_writer.writeheader()
 
     csv_writer.writerow(csv_dict)
 
@@ -47,9 +47,9 @@ def write_to_csv(csv_file, csv_dict, at_firstline=False,
 JSON_FILE = 'posts.json'
 CSV_FILE = 'posts.csv'
 with open(JSON_FILE, 'r', newline='') as json_file, open(CSV_FILE, 'w', newline='') as csv_file:
-    at_firstline = True
+    at_first_line = True
     for line in json_file:
         json_dict = json.loads(line)['_node']
         csv_dict = get_csv_dict(json_dict)
-        write_to_csv(csv_file, csv_dict, at_firstline)
-        if at_firstline: at_firstline = False
+        write_to_csv(csv_file, csv_dict, at_first_line)
+        if at_first_line: at_first_line = False
