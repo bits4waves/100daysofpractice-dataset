@@ -8,7 +8,7 @@ def bool_to_int(b):
     else:
         return 0
 
-def get_video_count(d):
+def get_video_view_count(d):
     if d['is_video']:
         return d['video_view_count']
     else:
@@ -23,7 +23,7 @@ def get_csv_dict(json_dict):
     csv_dict['is_video'] = bool_to_int(json_dict['is_video'])
     csv_dict['edge_liked_by-count'] = json_dict['edge_liked_by']['count']
     csv_dict['edge_media_to_comment-count'] = json_dict['edge_media_to_comment']['count']
-    csv_dict['video_view_count'] = get_video_count(json_dict)
+    csv_dict['video_view_count'] = get_video_view_count(json_dict)
     csv_dict['comments_disabled'] = bool_to_int(json_dict['comments_disabled'])
     csv_dict['__typename'] = json_dict['__typename']
     return csv_dict
