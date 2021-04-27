@@ -51,7 +51,5 @@ with open(JSON_FILE, 'r', newline='') as json_file, open(CSV_FILE, 'w', newline=
     for line in json_file:
         json_dict = json.loads(line)['_node']
         csv_dict = get_csv_dict(json_dict)
-
         write_to_csv(csv_file, csv_dict, at_firstline)
-
         if at_firstline: at_firstline = False
