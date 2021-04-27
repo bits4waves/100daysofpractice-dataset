@@ -3,7 +3,7 @@ $(error IG_USER is not set)
 endif
 
 PYTHON=python -i
-SRC=../src
+SRC=../../src
 GET_POSTS_PY=$(SRC)/get-posts.py
 POSTS_ORIG=posts-orig.json
 OBJECTS = $(POSTS_ORIG)
