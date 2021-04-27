@@ -571,3 +571,12 @@ See ya!
 :POST_DATE: [2021-04-27 Tue 12:26]
 :POSTID:   635
 :END:
+
+Ahoy!
+How have you been?
+
+In the [[http://bits4waves.wordpress.com/?p=479][last post]] we talked about the new arrival of post data, my concerns about 150k missing posts, and the will to investigate this.
+But after some thinking, I thought it was best to prioritize /publishing/ this data---over /investigating/ it.
+
+But before publishing it, we have to /anonymize/ it, and that’s today’s task!
+Let’s get to it.
