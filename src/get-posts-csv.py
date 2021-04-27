@@ -28,6 +28,9 @@ def get_csv_dict(json_dict):
     csv_dict['__typename'] = json_dict['__typename']
     return csv_dict
 
+def anonymize(data):
+    return data
+
 def write_to_csv(csv_file, csv_dict, at_firstline=False,
                  delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL):
     csv_writer = csv.DictWriter(csv_file,
