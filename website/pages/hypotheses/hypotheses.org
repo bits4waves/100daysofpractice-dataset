@@ -14,7 +14,7 @@
 
 * Good musical tones share basic quantifiable characteristics
 *** Project: [[http://bits4waves.wordpress.com/?p=499][Partials]]
-* Good violin plates have good musical tones
+* Good violin plates have low impedance, therefore low inharmonicity and high resonance
 
 #+BEGIN_EXPORT html
 <p xmlns:dct="http://purl.org/dc/terms/">
