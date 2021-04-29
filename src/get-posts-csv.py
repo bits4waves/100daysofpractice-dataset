@@ -77,6 +77,7 @@ owner_ids_anon = set()
 while(len(owner_ids_anon) < len(owner_ids)):
     anon_str = ''.join(random.choices(anon_chars, k=anon_str_len))
     owner_ids_anon.add(anon_str)
+owner_ids_dict = dict(zip(owner_ids, owner_ids_anon))
 
 with open(json_filename, 'r', newline='') as json_file, open(csv_filename, 'w', newline='') as csv_file:
     at_first_line = True
