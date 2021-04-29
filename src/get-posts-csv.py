@@ -4,6 +4,9 @@ import re
 import string
 import math
 import random
+import re
+
+HASHTAG_REGEX = '\#\w+'
 
 def bool_to_int(b):
     if b:
@@ -16,6 +19,9 @@ def get_video_view_count(d):
         return d['video_view_count']
     else:
         return 0
+
+def get_hashtags(text):
+    return re.compile(HASHTAG_REGEX).findall(text)
 
 def get_captions(json_dict):
     caption_edges = json_dict["edge_media_to_caption"]['edges']
