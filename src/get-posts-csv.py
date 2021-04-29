@@ -17,6 +17,12 @@ def get_video_view_count(d):
     else:
         return 0
 
+def get_captions(json_dict):
+    caption_edges = json_dict["edge_media_to_caption"]['edges']
+    captions = ' '.join([caption_edges[i]['node']['text'] \
+                         for i in range(len(caption_edges))])
+    return captions
+
 def get_csv_dict(json_dict, owner_ids_dict):
     csv_dict = dict()
     csv_dict['post-id'] = json_dict['id']
