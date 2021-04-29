@@ -52,6 +52,14 @@ def get_max_owner_id(json_filename):
                                int(json_dict['owner']['id']))
     return max_owner_id
 
+def get_owner_ids(json_filename):
+    """Return a set with all the owner IDs in posts from ‘json_filename’."""
+    with open(json_filename, 'r', newline='') as json_file:
+        owner_ids = set()
+        for line in json_file:
+            owner_ids.add(int(json.loads(line)['owner']['id']))
+    return owner_ids
+
 
 json_filename = 'posts.json'
 csv_filename = 'posts.csv'
