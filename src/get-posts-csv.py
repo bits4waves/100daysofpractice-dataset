@@ -81,6 +81,7 @@ def get_owner_ids(json_filename):
 
 json_filename = 'posts.json'
 csv_filename = 'posts.csv'
+rep_filename = 'posts-repeated.txt'
 
 max_owner_id = get_max_owner_id(json_filename)
 anon_chars = string.ascii_uppercase + string.digits
@@ -93,10 +94,18 @@ while(len(owner_ids_anon) < len(owner_ids)):
     owner_ids_anon.add(anon_str)
 owner_ids_dict = dict(zip(owner_ids, owner_ids_anon))
 
-with open(json_filename, 'r', newline='') as json_file, open(csv_filename, 'w', newline='') as csv_file:
+with open(json_filename, 'r', newline='') as json_file, \
+     open(csv_filename, 'w', newline='') as csv_file, \
+     open(rep_filename, 'w', newline='') as rep_file:
     at_first_line = True
+    shortcodes = set()
     for line in json_file:
         json_dict = json.loads(line)['_node']
         csv_dict = get_csv_dict(json_dict, owner_ids_dict)
         write_to_csv(csv_file, csv_dict, at_first_line)
         if at_first_line: at_first_line = False
+
+        shortcode = csv_dict['shortcode']
+        if shortcode in shortcodes:
+            print(shortcode, file=rep_file)
+        shortcodes.add(shortcode)
