@@ -19,7 +19,7 @@ def get_video_view_count(d):
 
 def get_csv_dict(json_dict, owner_ids_dict):
     csv_dict = dict()
-    csv_dict['id'] = json_dict['id']
+    csv_dict['post-id'] = json_dict['id']
     csv_dict['shortcode'] = json_dict['shortcode']
     csv_dict['taken_at_timestamp'] = json_dict['taken_at_timestamp']
     csv_dict['owner-id'] = owner_ids_dict[int(json_dict['owner']['id'])]
