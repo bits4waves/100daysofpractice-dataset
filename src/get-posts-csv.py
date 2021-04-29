@@ -59,7 +59,8 @@ def get_owner_ids(json_filename):
     with open(json_filename, 'r', newline='') as json_file:
         owner_ids = set()
         for line in json_file:
-            owner_ids.add(int(json.loads(line)['owner']['id']))
+            json_dict = json.loads(line)['_node']
+            owner_ids.add(int(json_dict['owner']['id']))
     return owner_ids
 
 
