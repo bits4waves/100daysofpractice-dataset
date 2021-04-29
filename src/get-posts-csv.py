@@ -116,4 +116,5 @@ with open(json_filename, 'r', newline='') as json_file, \
         shortcode = csv_dict['shortcode']
         if shortcode in shortcodes:
             print(shortcode, file=rep_file)
-        shortcodes.add(shortcode)
+        else:
+            shortcodes.add(shortcode)
