@@ -41,6 +41,8 @@ def get_csv_dict(json_dict, owner_ids_dict):
     csv_dict['video_view_count'] = get_video_view_count(json_dict)
     csv_dict['comments_disabled'] = bool_to_int(json_dict['comments_disabled'])
     csv_dict['__typename'] = json_dict['__typename']
+    csv_dict['hashtags'] = \
+        ' '.join(get_hashtags(get_captions(json_dict)))
     return csv_dict
 
 def anonymize(data):
