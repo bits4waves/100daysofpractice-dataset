@@ -43,6 +43,14 @@ def write_to_csv(csv_file, csv_dict, at_first_line=False,
 
     csv_writer.writerow(csv_dict)
 
+def get_max_owner_id(json_filename):
+    with open(json_filename, 'r', newline='') as json_file:
+        max_owner_id = 0
+        for line in json_file:
+            json_dict = json.loads(line)['_node']
+            max_owner_id = max(max_owner_id,
+                               int(json_dict['owner']['id']))
+    return max_owner_id
 
 
 json_filename = 'posts.json'
