@@ -3,6 +3,7 @@ import csv
 import re
 import string
 import math
+import random
 
 def bool_to_int(b):
     if b:
@@ -70,6 +71,12 @@ csv_filename = 'posts.csv'
 max_owner_id = get_max_owner_id(json_filename)
 anon_chars = string.ascii_uppercase + string.digits
 anon_str_len = math.ceil(math.log(max_owner_id, len(anon_chars)))
+
+owner_ids = get_owner_ids(json_filename)
+owner_ids_anon = set()
+while(len(owner_ids_anon) < len(owner_ids)):
+    anon_str = ''.join(random.choices(anon_chars, k=anon_str_len))
+    owner_ids_anon.add(anon_str)
 
 with open(json_filename, 'r', newline='') as json_file, open(csv_filename, 'w', newline='') as csv_file:
     at_first_line = True
