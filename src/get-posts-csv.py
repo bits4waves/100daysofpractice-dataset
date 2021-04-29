@@ -44,9 +44,10 @@ def write_to_csv(csv_file, csv_dict, at_first_line=False,
     csv_writer.writerow(csv_dict)
 
 
-JSON_FILE = 'posts.json'
-CSV_FILE = 'posts.csv'
-with open(JSON_FILE, 'r', newline='') as json_file, open(CSV_FILE, 'w', newline='') as csv_file:
+
+json_filename = 'posts.json'
+csv_filename = 'posts.csv'
+with open(json_filename, 'r', newline='') as json_file, open(csv_filename, 'w', newline='') as csv_file:
     at_first_line = True
     for line in json_file:
         json_dict = json.loads(line)['_node']
