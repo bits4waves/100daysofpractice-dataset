@@ -55,6 +55,9 @@ def get_max_owner_id(json_filename):
 
 json_filename = 'posts.json'
 csv_filename = 'posts.csv'
+
+max_owner_id = get_max_owner_id(json_filename)
+
 with open(json_filename, 'r', newline='') as json_file, open(csv_filename, 'w', newline='') as csv_file:
     at_first_line = True
     for line in json_file:
