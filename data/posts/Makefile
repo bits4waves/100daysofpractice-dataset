@@ -5,12 +5,12 @@ endif
 PYTHON=python -i
 SRC=../../src
 GET_POSTS_PY=$(SRC)/get-posts.py
-POSTS_ORIG=posts-orig.json
-OBJECTS = $(POSTS_ORIG)
+POSTS_JSON=posts.json
+OBJECTS = $(POSTS_JSON)
 
 all: $(OBJECTS)
 
-$(POSTS_ORIG):
+$(POSTS_JSON):
 	$(PYTHON) $(GET_POSTS_PY)
 
 clean:
