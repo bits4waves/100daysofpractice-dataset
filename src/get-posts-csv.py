@@ -82,6 +82,7 @@ def get_owner_ids(json_filename):
 json_filename = 'posts.json'
 csv_filename = 'posts.csv'
 rep_filename = 'posts-repeated.txt'
+owner_ids_dict_filename = 'owner_ids_dict.csv'
 
 max_owner_id = get_max_owner_id(json_filename)
 anon_chars = string.ascii_uppercase + string.digits
@@ -93,6 +94,13 @@ while(len(owner_ids_anon) < len(owner_ids)):
     anon_str = ''.join(random.choices(anon_chars, k=anon_str_len))
     owner_ids_anon.add(anon_str)
 owner_ids_dict = dict(zip(owner_ids, owner_ids_anon))
+
+with open(owner_ids_dict_filename, 'w') as owner_ids_dict_file:
+    print('"owner-id","owner-id-anon"', file=owner_ids_dict_file)
+    for owner_id in owner_ids_dict:
+        print('"' + str(owner_id) + '",' +
+              '"' + owner_ids_dict[owner_id] + '"',
+              file=owner_ids_dict_file)
 
 with open(json_filename, 'r', newline='') as json_file, \
      open(csv_filename, 'w', newline='') as csv_file, \
