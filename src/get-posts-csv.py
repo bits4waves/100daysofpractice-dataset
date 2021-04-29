@@ -17,12 +17,12 @@ def get_video_view_count(d):
     else:
         return 0
 
-def get_csv_dict(json_dict):
+def get_csv_dict(json_dict, owner_ids_dict):
     csv_dict = dict()
     csv_dict['id'] = json_dict['id']
     csv_dict['shortcode'] = json_dict['shortcode']
     csv_dict['taken_at_timestamp'] = json_dict['taken_at_timestamp']
-    csv_dict['owner-id'] = json_dict['owner']['id']
+    csv_dict['owner-id'] = owner_ids_dict[int(json_dict['owner']['id'])]
     csv_dict['is_video'] = bool_to_int(json_dict['is_video'])
     csv_dict['edge_liked_by-count'] = json_dict['edge_liked_by']['count']
     csv_dict['edge_media_to_comment-count'] = json_dict['edge_media_to_comment']['count']
@@ -83,6 +83,6 @@ with open(json_filename, 'r', newline='') as json_file, open(csv_filename, 'w', 
     at_first_line = True
     for line in json_file:
         json_dict = json.loads(line)['_node']
-        csv_dict = get_csv_dict(json_dict)
+        csv_dict = get_csv_dict(json_dict, owner_ids_dict)
         write_to_csv(csv_file, csv_dict, at_first_line)
         if at_first_line: at_first_line = False
