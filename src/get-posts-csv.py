@@ -1,6 +1,8 @@
 import json
 import csv
 import re
+import string
+import math
 
 def bool_to_int(b):
     if b:
@@ -65,6 +67,8 @@ json_filename = 'posts.json'
 csv_filename = 'posts.csv'
 
 max_owner_id = get_max_owner_id(json_filename)
+anon_chars = string.ascii_uppercase + string.digits
+anon_str_len = math.ceil(math.log(max_owner_id, len(anon_chars)))
 
 with open(json_filename, 'r', newline='') as json_file, open(csv_filename, 'w', newline='') as csv_file:
     at_first_line = True
