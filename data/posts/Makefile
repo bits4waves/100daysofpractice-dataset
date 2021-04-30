@@ -9,7 +9,7 @@ GET_POSTS_CSV_PY=$(SRC)/get-posts-csv.py
 POSTS_JSON=posts.json
 POSTS_CSV=posts.csv
 METADATA_TXT=posts-metadata.txt
-OBJECTS = $(POSTS_JSON)
+OBJECTS = $(POSTS_JSON) $(POSTS_CSV)
 
 all: $(OBJECTS)
 
