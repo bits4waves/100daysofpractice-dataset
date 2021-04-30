@@ -1,3 +1,5 @@
+#+HTML: <img src="https://bits4waves.files.wordpress.com/2021/04/hashtags-1.png" alt="whose most prominent words are 100daysofpractice, music, practice, and violin."></img>
+
 Data from Instagram posts with the hashtag =#100daysofpractice=.
 
 The file [[https://github.com/bits4waves/100daysofpractice-dataset/blob/master/data/posts/posts.zip?raw=true][posts.zip (40 MB)]] contains data from 450,000 Instagram posts with the hashtag =#100daysofpractice=.
