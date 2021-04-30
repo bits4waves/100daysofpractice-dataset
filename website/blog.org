@@ -601,5 +601,3 @@ To access the post in a web browser using a shortcode, just paste it after =http
 For instance the first post with the hashtag =#100daysofpractice= has the shortcode =BTrwiUuh8vV=.
 Hence you may access it with the link https://www.instagram.com/p/BTrwiUuh8vV.
 It was posted by the creator of the hashtag, =@violincase=, the violin virtuosa Hilary Hahn.
-
-
