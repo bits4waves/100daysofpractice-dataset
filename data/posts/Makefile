@@ -8,8 +8,8 @@ GET_POSTS_PY=$(SRC)/get-posts.py
 GET_POSTS_CSV_PY=$(SRC)/get-posts-csv.py
 POSTS_JSON=posts.json
 POSTS_CSV=posts.csv
-POSTS_ZIP=posts.zip
 METADATA_TXT=metadata.txt
+POSTS_ZIP=posts.zip
 OBJECTS = $(POSTS_JSON) $(POSTS_CSV) $(POSTS_ZIP)
 
 all: $(OBJECTS)
