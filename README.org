@@ -6,7 +6,7 @@ The file [[https://github.com/bits4waves/100daysofpractice-dataset/blob/master/d
 - =posts.csv=, which contains the posts data, and
 - =metadata.txt=, which contains the details about its generation.
 
-=posts.csv= is in the CSV format (everything quoted with ="=, separated by =,=).
+=posts.csv= is in the CSV format (everything quoted with @@html:<code>@@"@@html:</code>@@, separated by @@html:<code>@@,@@html:</code>@@).
 The fields therein and a short explanation are:
 - =post-id=: post’s unique ID
 - =shortcode=: a short string that can be used to access the post in a web browser (see below for instructions)
