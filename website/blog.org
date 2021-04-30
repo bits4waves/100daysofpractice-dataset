@@ -559,22 +559,3 @@ If there are some “gaps” in certain periods, this could suggest that the pro
 But this will be on a post of its own!
 
 See ya!
-* Anonymize data for research: Instagram posts
-:PROPERTIES:
-:BLOG:     eglur@bits4waves
-:OPTIONS: toc:nil num:nil todo:nil pri:nil tags:nil ^:nil
-:CATEGORY: 
-:POST_TAGS: 
-:ID:       o2b:f61c5af2-3c4f-4b1d-9cd1-d1bcae57a205
-:POST_DATE: [2021-04-27 Tue 12:26]
-:POSTID:   635
-:END:
-
-Ahoy!
-How have you been?
-
-In the [[http://bits4waves.wordpress.com/?p=479][last post]] we talked about the new arrival of post data, my concerns about 150k missing posts, and the will to investigate this.
-But after some thinking, I thought it was best to prioritize /publishing/ this data---over /investigating/ it.
-
-But before publishing it, we have to /anonymize/ it, and that’s today’s task!
-Let’s get to it.
