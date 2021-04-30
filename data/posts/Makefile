@@ -12,6 +12,7 @@ METADATA_TXT=metadata.txt
 POSTS_ZIP=posts.zip
 FILES_TO_ZIP= $(POSTS_CSV) $(METADATA_TXT)
 ZIP_FLAGS=-s 50m
+HASHTAGS_CSV=hashtags.csv
 OBJECTS = $(POSTS_JSON) $(POSTS_CSV) $(POSTS_ZIP)
 
 all: $(OBJECTS)
@@ -27,6 +28,22 @@ $(POSTS_CSV): $(POSTS_JSON)
 
 $(POSTS_ZIP): $(POSTS_CSV) $(METADATA_TXT)
 	zip $(ZIP_FLAGS) $(POSTS_ZIP) $(FILES_TO_ZIP)
+
+$(HASHTAGS_CSV): $(POSTS_CSV)
+	tail -n +2 $(POSTS_CSV) |\
+	cut -d ',' -f11 |\
+	tr '[:upper:]' '[:lower:]' |\
+	tr --delete '"' |\
+	tr --delete '' |\
+	tr ' ' '\n' |\
+	sort |\
+	uniq -c |\
+	tr --delete '^[:blank:]*' |\
+	tr '#' ' ' |\
+	tail -n +2 |\
+	sort --human-numeric-sort --reverse |\
+	tr ' ' ',' \
+	> $(HASHTAGS_CSV)
 
 clean:
 	rm -rf $(OBJECTS)
