@@ -6,18 +6,18 @@ The file [[https://github.com/bits4waves/100daysofpractice-dataset/blob/master/d
 - =posts.csv=, which contains the posts data, and
 - =metadata.txt=, which contains the details about its generation.
 
-=posts.csv= is in the CSV format (everything quoted with ‘"’, separated by ‘,’).
+=posts.csv= is in the CSV format (everything quoted with ="=, separated by =,=).
 The fields therein and a short explanation are:
 - =post-id=: post’s unique ID
 - =shortcode=: a short string that can be used to access the post in a web browser (see below for instructions)
 - =taken_at_timestamp=: the date when it was posted
 - =owner-id=: a unique ID representing the user who posted it; this data was anonymized for privacy reasons, therefore this is not the real user ID
-- =is_video=: ‘1’ if it is a video, ‘0’ otherwise
+- =is_video=: =1= if it is a video, =0= otherwise
 - =edge_liked_by-count=: number of likes
 - =edge_media_to_comment-count=: number of comments
 - =video_view_count=: number of views
-- =comments_disabled=: ‘1’ if comments were disabled, ‘0’ otherwise
-- =__typename=: ‘GraphImage’ if it is an image post, ‘GraphVideo’ for video one, or ‘GraphSidecar’ for a post with more than one media
+- =comments_disabled=: =1= if comments were disabled, =0= otherwise
+- =__typename=: =GraphImage= if it is an image post, =GraphVideo= for video one, or =GraphSidecar= for a post with more than one media
 - =hashtags=: hashtags from the comments
 
 To access the post in a web browser using a shortcode, just paste it after =https://www.instagram.com/p/=.
