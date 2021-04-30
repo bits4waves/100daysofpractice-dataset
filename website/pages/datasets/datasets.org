@@ -8,6 +8,7 @@
 #+TITLE: Datasets
 
 * [[https://github.com/bits4waves/100daysofpractice-dataset][#100daysofpractice-dataset]]
+#+HTML: <img src="https://bits4waves.files.wordpress.com/2021/04/hashtags-1.png" alt="whose most prominent words are 100daysofpractice, music, practice, and violin."></img>
 *** A collection of data from Instagram posts with the hashtag =#100daysofpractice=.
 
 #+BEGIN_EXPORT html
