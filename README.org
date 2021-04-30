@@ -1,14 +1,31 @@
-Links for Instagram posts with the hashtag =#100daysofpractice=.
+Data from Instagram posts with the hashtag =#100daysofpractice=.
 
-Specifically, the file [[https://github.com/bits4waves/100daysofpractice-dataset/blob/master/shortcodes/shortcodes.txt][shortcodes.txt]] ([[https://raw.githubusercontent.com/bits4waves/100daysofpractice-dataset/master/shortcodes/shortcodes.txt][raw (5 MB)]])  contains a list of 450,092 /shortcodes/ of instagram posts with the hashtag =#100daysofpractice=.
+The file [[https://github.com/bits4waves/100daysofpractice-dataset/blob/master/data/posts/posts.zip?raw=true][posts.zip (40 MB)]] contains data from 450,000 Instagram posts with the hashtag =#100daysofpractice=.
 
-To access the post given a shortcode, just paste the shortcode after =https://www.instagram.com/p/=.
+=posts.zip= contains two files:
+- =posts.csv=, which contains the posts data, and
+- =metadata.txt=, which contains the details about its generation.
 
+=posts.csv= is in the CSV format (everything quoted with ‘"’, separated by ‘,’).
+The fields therein and a short explanation are:
+- =post-id=: post’s unique ID
+- =shortcode=: a short string that can be used to access the post in a web browser (see below for instructions)
+- =taken_at_timestamp=: the date when it was posted
+- =owner-id=: a unique ID representing the user who posted it; this data was anonymized for privacy reasons, therefore this is not the real user ID
+- =is_video=: ‘1’ if it is a video, ‘0’ otherwise
+- =edge_liked_by-count=: number of likes
+- =edge_media_to_comment-count=: number of comments
+- =video_view_count=: number of views
+- =comments_disabled=: ‘1’ if comments were disabled, ‘0’ otherwise
+- =__typename=: ‘GraphImage’ if it is an image post, ‘GraphVideo’ for video one, or ‘GraphSidecar’ for a post with more than one media
+- =hashtags=: hashtags from the comments
+
+To access the post in a web browser using a shortcode, just paste it after =https://www.instagram.com/p/=.
 For instance the first post with the hashtag =#100daysofpractice= has the shortcode =BTrwiUuh8vV=.
 Hence you may access it with the link https://www.instagram.com/p/BTrwiUuh8vV.
 It was posted by the creator of the hashtag, =@violincase=, the violin virtuosa Hilary Hahn.
 
-You may replicate the process by which they were obtained by running the following commands:
+You may replicate the process by which the data was obtained through the following steps:
 
 #+BEGIN_EXAMPLE
 git clone git@github.com:bits4waves/100daysofpractice-dataset.git
@@ -17,8 +34,7 @@ python3 -m venv venv
 source venv/bin/activate
 python -m pip install requests
 python -m pip install -r requirements.txt
-cd shortcodes
-make clean
+cd data/posts
 make
 #+END_EXAMPLE
 
