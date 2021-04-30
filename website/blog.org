@@ -559,3 +559,47 @@ If there are some “gaps” in certain periods, this could suggest that the pro
 But this will be on a post of its own!
 
 See ya!
+* Dataset release: 450,000 Instagram posts with the hashtag #100daysofpractice
+:PROPERTIES:
+:BLOG:     eglur@bits4waves
+:OPTIONS: toc:nil num:nil todo:nil pri:nil tags:nil ^:nil
+:CATEGORY: Dataset
+:POST_TAGS: hack,100daysofpractice
+:ID:       o2b:41f51abf-eb1d-4217-b5a1-f31df09e7537
+:POST_DATE: [2021-04-30 Fri 14:25]
+:POSTID:   641
+:END:
+
+Hello!
+I’m glad to announce the release of [[https://github.com/bits4waves/100daysofpractice-dataset][=100daysofpractice-dataset=]]!
+
+Below you’ll find the description of the dataset.
+
+Data from Instagram posts with the hashtag =#100daysofpractice=.
+
+The file [[https://github.com/bits4waves/100daysofpractice-dataset/blob/master/data/posts/posts.zip?raw=true][posts.zip (40 MB)]] contains data from 450,000 Instagram posts with the hashtag =#100daysofpractice=.
+
+=posts.zip= contains two files:
+- =posts.csv=, which contains the posts data, and
+- =metadata.txt=, which contains the details about its generation.
+
+=posts.csv= is in the CSV format (everything quoted with @@html:<code>@@"@@html:</code>@@, separated by @@html:<code>@@,@@html:</code>@@).
+The fields therein and a short explanation are:
+- =post-id=: post’s unique ID
+- =shortcode=: a short string that can be used to access the post in a web browser (see below for instructions)
+- =taken_at_timestamp=: the date when it was posted
+- =owner-id=: a unique ID representing the user who posted it; this data was anonymized for privacy reasons, therefore this is not the real user ID
+- =is_video=: =1= if it is a video, =0= otherwise
+- =edge_liked_by-count=: number of likes
+- =edge_media_to_comment-count=: number of comments
+- =video_view_count=: number of views
+- =comments_disabled=: =1= if comments were disabled, =0= otherwise
+- =__typename=: =GraphImage= if it is an image post, =GraphVideo= for video one, or =GraphSidecar= for a post with more than one media
+- =hashtags=: hashtags from the comments
+
+To access the post in a web browser using a shortcode, just paste it after =https://www.instagram.com/p/=.
+For instance the first post with the hashtag =#100daysofpractice= has the shortcode =BTrwiUuh8vV=.
+Hence you may access it with the link https://www.instagram.com/p/BTrwiUuh8vV.
+It was posted by the creator of the hashtag, =@violincase=, the violin virtuosa Hilary Hahn.
+
+
