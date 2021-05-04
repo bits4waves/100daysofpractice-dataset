@@ -75,7 +75,7 @@ Partials -> Upper_Partials [arrowhead=none]
 
 This project investigates ways to measure the quality of a musical tone using basic structural components.
 
-Helmholtz (1) proposed a basic sound taxonomy for the sound comprised by
+Helmholtz (1) proposed a basic taxonomy for the sound comprised by
 - /intensity/,
 - /pitch/, and
 - /quality/.
