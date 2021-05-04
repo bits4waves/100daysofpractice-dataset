@@ -75,7 +75,7 @@ Partials -> Upper_Partials [arrowhead=none]
 
 This project investigates ways to measure the quality of a musical tone using basic structural components.
 
-Helmholtz (1) proposed a basic taxonomy for the sound comprised by
+Helmholtz (1) proposed a basic taxonomy for the sound comprised by:
 - /intensity/,
 - /pitch/, and
 - /quality/.
@@ -106,18 +106,22 @@ Steps 3 and 4 are self-explanatory.
 
 For more details about the inspiration for this project, please continue reading.
 
-In his seminal book, /On the Sensations of Tone/ (1), Helmholtz proposed the characterization of a musical tone by
+In his seminal book, /On the Sensations of Tone/ (1), Helmholtz proposed the characterization of a musical tone by:
+
 - intensity,
 - pitch, and
 - quality.
+
 This is depicted in the figure above.
 
 These three components may be relativelly well described in terms of their partials:
+
 - the intensity of the sound being the sum of the individual intensities of the partials, and
 - the pitch being a function of the frequency of the fundamental and corresponding upper partials,
 - the quality encompassing other carachteristics besides intensity and pitch, e.g., deviations or conformities relative to expected individual characteristics of the partials.
 
 Additionally,
+
 - /resonance/ may increase the intensities of the partials, thus increasing the overall sound intensity
 - /intonation/ determines the frequency of the fundamental, hence the pitch itself
 - /harmonicity/ reflects how close the frequency of each upper partial is to the corresponding “ideal” one (the one that maximizes /consonance/).
