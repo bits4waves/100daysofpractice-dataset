@@ -4,3 +4,4 @@
 venv*
 \#100daysofpractice
 profiles
+.ipynb_checkpoints/
