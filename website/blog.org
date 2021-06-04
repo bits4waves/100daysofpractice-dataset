@@ -628,7 +628,7 @@ Hilary Hahn---=@violincase=---[[https://www.instagram.com/p/BTrwiUuh8vV][created
 If you look at the picture, you can see purple vertical lines at the very left.
 These lines correspond to the days when =@violincase= posted with the hashtag.
 Most of the time this means she’s in the middle of one of her 100 Days, but not always.
-For instance, [[https://www.instagram.com/p/BbDB7gHhY4l/][in November 3, 2017 she has a post with the hashtag]] (3), but this is a [[https://www.instagram.com/p/B1mUVxel8Kn/][repost from =@stringsmagazine= on their new news article about Hilary Hahn’s creation of =#100daysofpractice=]] (4).
+For instance, [[https://www.instagram.com/p/BbDB7gHhY4l/][in November 3, 2017 she has a post with the hashtag]] (3), but this is a repost from [[https://www.instagram.com/p/B1mUVxel8Kn/][=@stringsmagazine= on their new news article about Hilary Hahn’s creation of =#100daysofpractice=]] (4).
 
 It’s also interesting to see how her startings of their 100 Days seem to coincide with an increase in the number of posts with the hashtag.
 This suggests that she inspires us not only with her music, but also with her practice routine.
@@ -650,3 +650,5 @@ Stay tuned!
 2. https://www.instagram.com/p/BTrwiUuh8vV
 3. [[https://www.instagram.com/p/BbDB7gHhY4l]]
 4. https://www.instagram.com/p/B1mUVxel8Kn
+
+You can also [[https://colab.research.google.com/drive/1U4hskpQ4FWzuguz5eS6B1GJNB7mCpMgB?usp=sharing][play with the Python Notebook on Google Colab]]!
