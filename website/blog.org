@@ -605,3 +605,48 @@ To access the post in a web browser using a shortcode, just paste it after =http
 For instance the first post with the hashtag =#100daysofpractice= has the shortcode =BTrwiUuh8vV=.
 Hence you may access it with the link https://www.instagram.com/p/BTrwiUuh8vV.
 It was posted by the creator of the hashtag, =@violincase=, the violin virtuosa Hilary Hahn.
+* #100daysofpractice: Hilary Hahn’s creation, inspiration, and the impact on practice during the pandemics 
+:PROPERTIES:
+:BLOG:     eglur@bits4waves
+:OPTIONS: toc:nil num:nil todo:nil pri:nil tags:nil ^:nil
+:CATEGORY: Dataset
+:POST_TAGS: hack,100daysofpractice
+:ID:       o2b:15b9e9e1-52c9-4142-8c24-77a0e905ae52
+:POST_DATE: [2021-06-04 Fri 15:39]
+:POSTID:   665
+:END:
+#+HTML: <img src="https://bits4waves.files.wordpress.com/2021/06/100dop.png" alt="Graph showing a crescent number of posts per day with a marked increase during the pandemics."></img>
+
+Hello back!
+
+This time I bring a fresh new graph: the initial analysis of the [[https://github.com/rafaelbeirigo/100daysofpractice-dataset][=#100daysofpractice= dataset]] (1).
+After all the work to fetch the almost half a million posts’ data from Instagram, it was a relief to look at it more closely and see that it apparently makes sense---strongly suggesting that we may move forward to the next step: stratify the data and fetch the practice videos!
+But before that, let’s not only celebrate, but also look at it and let things sink in.
+
+First things first, let’s look at the creation of the hashtag!
+Hilary Hahn---=@violincase=---[[https://www.instagram.com/p/BTrwiUuh8vV][created the hashtag in May 4, 2017]] (2), starting her first 100 Days right there.
+If you look at the picture, you can see purple vertical lines at the very left.
+These lines correspond to the days when =@violincase= posted with the hashtag.
+Most of the time this means she’s in the middle of one of her 100 Days, but not always.
+For instance, [[https://www.instagram.com/p/BbDB7gHhY4l/][in November 3, 2017 she has a post with the hashtag]] (3), but this is a [[https://www.instagram.com/p/B1mUVxel8Kn/][repost from =@stringsmagazine= on their new news article about Hilary Hahn’s creation of =#100daysofpractice=]] (4).
+
+It’s also interesting to see how her startings of their 100 Days seem to coincide with an increase in the number of posts with the hashtag.
+This suggests that she inspires us not only with her music, but also with her practice routine.
+The most marked time this happened was at the start of 2021, where the number of posts with the hashtag soon doubled!
+Here, her inspirational prowess may have been helped by one curious---though possibly not very surprising---trend: the number of posts with =100daysofpractice= seems to drastically increase at the beginnings of the years.
+One obvious explanation for this would be, of course, the not so rare resolution of “practicing more this year”:).
+
+It is also good to see how the hashtag was used more during the pandemics.
+During those uncertain days, the daily number of posts with the hashtag jumped from 300 to 800 daily.
+Those lonely hours of practice were certainly a good occupation for many many practitioners.
+
+We would like to say our sincere Thank You to Hilary Hahn for creating such inspiring hashtag!
+It certainly helped practice with a beautiful sense of connection!
+
+Now, we will have some great news soon concerning the use of the =#100daysofpractice= dataset.
+Stay tuned!
+
+1. https://github.com/rafaelbeirigo/100daysofpractice-dataset
+2. https://www.instagram.com/p/BTrwiUuh8vV
+3. [[https://www.instagram.com/p/BbDB7gHhY4l]]
+4. https://www.instagram.com/p/B1mUVxel8Kn
