@@ -4,7 +4,7 @@
 #+PROPERTY: header-args :results output pp
 #+PROPERTY: header-args:python :session *python*
 
-Posts of, to, and from 
+Posts of, to, and from
 [[https://bits4waves.wordpress.com/blog][Bits4Waves’ Blog]].
 * Fetch the data from the shortcodes
 :PROPERTIES:
@@ -630,17 +630,17 @@ These lines correspond to the days when =@violincase= posted with the hashtag.
 Most of the time this means she’s in the middle of one of her 100 Days, but not always.
 For instance, [[https://www.instagram.com/p/BbDB7gHhY4l/][in November 3, 2017 she has a post with the hashtag]] (3), but this is a repost from [[https://www.instagram.com/p/B1mUVxel8Kn/][=@stringsmagazine= on their new news article about Hilary Hahn’s creation of =#100daysofpractice=]] (4).
 
-It’s also interesting to see how her startings of their 100 Days seem to coincide with an increase in the number of posts with the hashtag.
+It’s also interesting to see how her startings of her 100 Days seem to coincide with an increase in the number of posts with the hashtag.
 This suggests that she inspires us not only with her music, but also with her practice routine.
 The most marked time this happened was at the start of 2021, where the number of posts with the hashtag soon doubled!
-Here, her inspirational prowess may have been helped by one curious---though possibly not very surprising---trend: the number of posts with =100daysofpractice= seems to drastically increase at the beginnings of the years.
-One obvious explanation for this would be, of course, the not so rare resolution of “practicing more this year”:).
+Here, her inspirational prowess may have been helped by one curious---though possibly not very surprising---trend: the number of posts with =#100daysofpractice= seems to drastically increase at the beginnings of the years.
+One obvious explanation for this would be, of course, the not so rare resolution of “practicing more this year” :)---or “start the year with a good practice session!”
 
 It is also good to see how the hashtag was used more during the pandemics.
 During those uncertain days, the daily number of posts with the hashtag jumped from 300 to 800 daily.
 Those lonely hours of practice were certainly a good occupation for many many practitioners.
 
-We would like to say our sincere Thank You to Hilary Hahn for creating such inspiring hashtag!
+We would like to say our sincere Thank You to Hilary Hahn for creating such an inspiring hashtag!
 It certainly helped practice with a beautiful sense of connection!
 
 Now, we will have some great news soon concerning the use of the =#100daysofpractice= dataset.
