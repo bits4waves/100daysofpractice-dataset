@@ -614,7 +614,7 @@ It was posted by the creator of the hashtag, =@violincase=, the violin virtuosa 
 :POST_DATE: [2021-06-04 Fri 15:39]
 :POSTID:   665
 :END:
-#+HTML: <img src="https://bits4waves.files.wordpress.com/2021/06/100dop.png" alt="Graph showing a crescent number of posts per day with a marked increase during the pandemics."></img>
+#+HTML: <img style="display:block;margin-left:auto;margin-right:auto; width:100%;" src="https://bits4waves.files.wordpress.com/2021/06/100dop.png" alt="Graph showing a crescent number of posts per day with a marked increase during the pandemics."></img>
 
 Hello back!
 
