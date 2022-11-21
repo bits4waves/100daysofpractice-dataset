@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       97036a12-c3f6-4e3e-8b63-189bd1c4d91a
+:END:
 #+POSTID: 515
 #+ORG2BLOG:
 #+DATE: [2021-04-19 Mon 19:06]
@@ -7,8 +10,19 @@
 #+DESCRIPTION:
 #+TITLE: Projects
 
-* [[http://bits4waves.wordpress.com/?p=499][Partials]]
-*** Quality measurement of musical tones using basic structural components.
+* [[http://bits4waves.wordpress.com/?p=499][Pieces]]
+:PROPERTIES:
+:ID:       o2b:17ca27fa-0f07-42cf-86e9-e14716dc0f13
+:POST_DATE: [2022-11-21 Mon 15:29]
+:POSTID:   951
+:END:
+
+*** Qualitya measurement of musical tones using basic structural components.
+:PROPERTIES:
+:ID:       o2b:cb5794fb-4dd0-4bf9-8702-1967731d285b
+:POST_DATE: [2022-11-21 Mon 15:30]
+:POSTID:   953
+:END:
 
 #+BEGIN_EXPORT html
 <p xmlns:dct="http://purl.org/dc/terms/">
