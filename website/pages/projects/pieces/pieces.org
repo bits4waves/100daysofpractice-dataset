@@ -5,7 +5,7 @@
 #+CATEGORY:
 #+TAGS:
 #+DESCRIPTION:
-#+TITLE: Project PIECES
+#+TITLE: PIECES
 
 #+BEGIN_SRC dot :file img/sound-digraph.png :exports none
 digraph "sound" {
