@@ -17,7 +17,7 @@
 :POSTID:   951
 :END:
 
-*** Qualitya measurement of musical tones using basic structural components.
+*** Quality measurement of musical tones using basic structural components
 :PROPERTIES:
 :ID:       o2b:cb5794fb-4dd0-4bf9-8702-1967731d285b
 :POST_DATE: [2022-11-21 Mon 15:30]

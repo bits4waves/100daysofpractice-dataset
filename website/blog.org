@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       911e19d7-aed5-412e-b6db-6b645c6a980b
+:END:
 #+POSTID: 649
 #+DATE: [2021-04-30 Fri 17:37]
 #+ORG2BLOG
