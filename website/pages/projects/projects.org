@@ -10,7 +10,7 @@
 #+DESCRIPTION:
 #+TITLE: Projects
 
-* [[http://bits4waves.wordpress.com/?p=499][Pieces]]
+* [[http://bits4waves.wordpress.com/?p=499][PIECES]]
 :PROPERTIES:
 :ID:       o2b:17ca27fa-0f07-42cf-86e9-e14716dc0f13
 :POST_DATE: [2022-11-21 Mon 15:29]
