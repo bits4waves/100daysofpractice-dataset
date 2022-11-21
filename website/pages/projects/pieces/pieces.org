@@ -73,7 +73,8 @@ Partials -> Upper_Partials [arrowhead=none]
 
 #+HTML: <img src="https://bits4waves.files.wordpress.com/2021/04/sound-digraph-1.png" alt="Digraph depicting the central role of the partials in the sound structure."></img>
 
-This project investigates ways to measure the quality of a musical tone using basic structural components.
+This project investigates basic structural components that are useful
+to measure sound quality.
 
 Helmholtz (1) proposed a basic taxonomy for the sound comprised by:
 - /intensity/,
